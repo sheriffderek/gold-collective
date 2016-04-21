@@ -1,0 +1,72 @@
+
+static()
+	position: static
+
+relative()
+	position: relative
+
+absolute()
+	position: absolute
+
+fixed()
+	position: fixed
+
+hide()
+  	display: none
+
+show($type = 'block')
+	display: $type
+
+reset-floats()
+	float: none
+	clearn: none
+
+center-center()
+	reset-floats()
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+absolute-translate-center()
+	absolute()
+	center-center()
+
+fixed-translate-center()
+	fixed()
+	center-center()
+
+cover()
+	width: 100%
+	height: 100%
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+absolute-cover()
+	absolute()
+	cover()
+
+fixed-cover()
+	fixed()
+	cover()
+
+block-size($width, $height = $width)
+	width: $width
+	height: $height
+
+flex()
+	clear-floats()
+	display: flex
+
+flex-row()
+	flex()
+	flex-direction: row
+
+flex-column()
+	flex()
+	flex-direction: column
+
+flex-balance()
+	flex-row()
+	align-items: center

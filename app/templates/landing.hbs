@@ -1,0 +1,17 @@
+
+{{post-list posts=model}}
+
+{{element-slider elements=model}}
+
+{{#each model.splashImages as |splashImage|}}
+	<li>
+		{{splashImage.slug}}
+		<div class='image-w'>
+			<img src='{{splashImage.better_featured_image.source_url}}' alt=''>
+		</div>
+	</li>
+{{/each}}
+
+{{{model.landing.content}}}
+
+{{outlet}}

@@ -1,0 +1,39 @@
+
+// ensure font size isn't adjusted in mobile browsers
+html 
+	font-size: 100% 
+	overflow-y: scroll 
+	-webkit-text-size-adjust: 100% 
+	-ms-text-size-adjust: 100%
+
+// remove default margin // this shoul be already done in meyer-reset $check
+body //
+	margin 0
+
+// links reset to inherit styles by default
+a //
+	text-decoration: none
+	color: inherit
+	&:hover
+		cursor: pointer // just in case
+
+// cursor reset / stops blinking issues
+html,
+body
+	cursor: default
+input[type="text"], textarea, code
+	cursor: text
+a,
+label,
+button,
+input[type="radio"],
+input[type="submit"],
+input[type="checkbox"]
+	cursor pointer
+button[disabled],
+input[disabled]
+	cursor: default
+
+// resolves an IE 9 SVG bug
+svg:not(:root)
+	overflow: hidden

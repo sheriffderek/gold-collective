@@ -1,0 +1,40 @@
+
+// When using Ember, component styles should be in their own files
+// https://github.com/ebryn/ember-component-css
+
+// standard button
+button()
+	// display: inline-block
+	background: $gray
+	color: $gray-dark
+	border-radius: $corner
+	padding: $pad $pad*2
+	// line-height: $tap
+	min-width: 160px
+	text-align: center
+	cursor: pointer
+	transition: .5s
+	flex-balance()
+	// width: 0
+	white-space: nowrap
+	&:hover
+		background: $gray-dark
+		color: $white
+		transition: .1s
+	&.color
+		background: $color
+		color: $color-dark
+	&.highlight
+		background: $highlight
+		color: $highlight-dark
+	&.alternate
+		background: $alternate
+		color: $alternate-dark
+	.icon-x
+		margin-left: .5rem
+	@media break-point-2
+		max-width: auto
+		max-height: auto
+
+.button
+	button()

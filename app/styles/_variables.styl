@@ -1,0 +1,37 @@
+
+// colors
+$black 		= #222222
+$white 		= #efefef
+$gray 		= #666666
+
+$color 		= #66ccff
+$highlight 	= #ff6666 
+$alternate 	= #ffff66
+
+// shade
+shade($color, $percent)
+	mix($black, $color, $percent)
+
+// tint
+tint($color, $percent)
+	mix($white, $color, $percent)
+
+// variations
+$gray-light 		= tint($gray, 50%)
+$gray-dark 			= shade($gray, 50%)
+$gray-lighter 		= tint($gray-light, 80%)
+
+$color-light 		= tint($color, 50%)
+$color-dark 		= shade($color, 50%)
+
+$highlight-light 	= tint($highlight, 50%)
+$highlight-dark 	= shade($highlight, 25%)
+
+$alternate-light 	= tint($alternate, 50%)
+$alternate-dark 	= shade($alternate, 25%)
+
+// layout
+$pad 	= 0.6rem
+$gutter = $pad
+
+$corner = $pad*.4
