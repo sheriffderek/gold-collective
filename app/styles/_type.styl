@@ -1,4 +1,26 @@
 
+// Fonts mixin
+font-url(file)
+  return '../fonts/JeanLuc/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'), 
+        url(font-url(file + '.ttf')) format('truetype'), 
+        url(font-url(file + '.svg#'+ family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')
+
+webfont('JeanLuc', 'jeanlucweb-thin', true, 'normal')
+
 // type reset
 h1, h2, h3, h4, h5, h6, li, p
 	margin: 0
@@ -13,7 +35,7 @@ selectable($target)
 	user-select: $target
 
 *:not(input) //
-	selectable(none)
+	// selectable(none)
 
 h1, h2, h3, h4, h5, h6, li, p
 	selectable(text)
@@ -35,13 +57,13 @@ selection-color($selection-color)
 selection-color($highlight)
 
 // font stack
-$heading-font-stack	= 'Quicksand', sans-serif
+$heading-font-stack	= 'JeanLuc', sans-serif
 $base-font-stack 	= 'Georgia', serif
 
 // simplified font-size syntax ??? 
 size($font-size)
 	font-size: ($font-size)px
-	
+
 font-size($font-size)
 	font-size: ($font-size)px
 
@@ -51,7 +73,7 @@ extra-small-type()
 	font-size(10)
 	line-height: 1.4
 	color: $gray
-	@media break-point-2
+	@media $break-point-2
 		font-size(11)
 
 small-type()
@@ -59,38 +81,36 @@ small-type()
 	font-size(13)
 	line-height: 1.4
 	color: $gray-dark
-	@media break-point-2
+	@media $break-point-2
 		font-size(14)
 
 standard-type()
 	copy()
 	font-size(16)
-	line-height: 1.4
+	line-height: 1.5
 	color $black
-	@media break-point-2
+	@media $break-point-1
 		font-size(17)
 
 medium-type()
 	font-size(19)
 	line-height: 1.4
-	color: $color
 	font-weight: bold
-	@media break-point-2
+	@media $break-point-2
 		font-size(20)
 
 large-type()
+	font-family: $heading-font-stack
 	font-size(24)
 	line-height: 1.4
-	color: $alternate
-	@media break-point-2
-		font-size(26)
+	@media $break-point-2
+		font-size(30)
 
 extra-large-type()
-	font-family: $heading-font
+	font-family: $heading-font-stack
 	font-size(34)
 	line-height: 1.4
-	color: $highlight
-	@media break-point-2
+	@media $break-point-2
 		font-size(38)
 
 // case
@@ -113,8 +133,7 @@ uppercase()
 
 	h2 //
 		large-type()
-		color $color
-		margin-bottom: $pad
+		margin-bottom: $pad*2
 	p + h2
 		margin-top: $pad*3
 
@@ -141,7 +160,15 @@ uppercase()
 
 	p //
 		standard-type()
-		margin-bottom: $pad
+		margin-bottom: $pad*2
+		font-style: italic
+		standard-type()
+		a //
+			color: orange
+		strong
+			font-weight: 700
+		em //
+			font-style: italic
 
 	ul, ol
 		padding: $pad 0 $pad $pad*1.7

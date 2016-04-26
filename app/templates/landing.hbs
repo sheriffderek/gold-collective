@@ -1,17 +1,23 @@
 
-{{post-list posts=model}}
+{{element-slider posts=model}}
 
-{{element-slider elements=model}}
 
-{{#each model.splashImages as |splashImage|}}
-	<li>
-		{{splashImage.slug}}
-		<div class='image-w'>
-			<img src='{{splashImage.better_featured_image.source_url}}' alt=''>
-		</div>
-	</li>
-{{/each}}
 
-{{{model.landing.content}}}
+{{!-- {{#link-to 'about' class='portal'}}
+	<span class='the'>The</span> <span class='gold'>Gold</span><br>
+	<span class='collective'>Collective</span>
+{{/link-to}} --}}
+
+
+
+{{#link-to 'about' class='image-w portal'}}
+	{{gold-logo}}
+{{/link-to}}
+
+{{!-- <div class='image-w portal'>
+	{{gold-logo}}
+</div>
+
+ --}}
 
 {{outlet}}
