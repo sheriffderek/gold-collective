@@ -58,6 +58,7 @@ selection-color($highlight)
 
 // font stack
 $heading-font-stack	= 'JeanLuc', sans-serif
+$xxx = "futura-pt",sans-serif
 $base-font-stack 	= 'Georgia', serif
 
 // simplified font-size syntax ??? 
@@ -93,11 +94,12 @@ standard-type()
 		font-size(17)
 
 medium-type()
-	font-size(19)
+	font-size(22)
 	line-height: 1.4
 	font-weight: bold
+	font-family: $xxx
 	@media $break-point-2
-		font-size(20)
+		font-size(24)
 
 large-type()
 	font-family: $heading-font-stack
@@ -132,7 +134,7 @@ uppercase()
 		margin-bottom: $pad
 
 	h2 //
-		large-type()
+		medium-type()
 		margin-bottom: $pad*2
 	p + h2
 		margin-top: $pad*3

@@ -32,15 +32,24 @@ h1 //
 	// 	center-block()
 	// 	max-width: 700px
 
-.content.about
+section.content
 	padding: 1rem
-	max-width: 800px
+	// max-width: 800px
+	// border: 2px solid red
 	.inner-w
 		// padding-bottom: $pad*8
+		// border: 2px solid blue
 	@media $break-point-1
 		padding: 1.5rem
 	@media $break-point-2
 		padding: 2rem
+
+	@media $break-point-3
+		.inner-w
+			// margin: 0 auto
+			margin-left: 10%
+			max-width: 800px
+			// transform: translate(5%, 0)
 	footer
 		padding: $pad*4 0 $pad*16
 .type
@@ -48,7 +57,8 @@ h1 //
 	h1 //
 		extra-large-type()
 	h2 //
-		large-type()
+		medium-type()
+		color: red
 	h3 //
 		medium-type()
 	p //

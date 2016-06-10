@@ -20,6 +20,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.typekit = {
+    kitId: 'tsb5xax'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
