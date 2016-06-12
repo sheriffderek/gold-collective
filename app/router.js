@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('inspiration');
   this.route('style-guide');
+  this.route('secret-about');
 });
 
 export default Router;

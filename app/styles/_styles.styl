@@ -32,6 +32,10 @@ h1 //
 	// 	center-block()
 	// 	max-width: 700px
 
+figure
+	responsive-image()
+	max-width: 300px
+
 section.content
 	padding: 1rem
 	// max-width: 800px
@@ -108,12 +112,44 @@ svg
 		text-align: center
 
 .contact-list
+	margin-bottom: $pad*12
 	li //
+		display: block
+		margin-bottom: $pad	
+		width: 100%	
+		// border: 2px solid blue
+		float: left
 		a //
+			relative()
 			display: block
 			padding: $pad*.5 0
+			// border: 1px solid red
+			float: left
+			// transition: .2s
+			&:after
+				absolute()
+				content: ''
+				top: 0
+				left: 0
+				width: 105%
+				height: 100%
+				background: black
+				z-index: -1
+				transform: translate(-3px,0)
+				opacity: 0
+				// transition: .2s
+				// transition-delay: .2s
+				outline: 3px solid black
+			&:hover
+				// background: black
+				color: white
+				&:after
+					opacity: 1
+					transform: translate(-3px,0)
 		.title
-			font-weight: 700
+			display: inline-block
+			special()
+			min-width: 70px
 
 
 

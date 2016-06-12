@@ -54,11 +54,18 @@ selection-color($selection-color)
 		color: $selection-color
 
 // scope specific text selection highlights
-selection-color($highlight)
+selection-color($color)
+
+special()
+	font-weight: 700
+	font-family: $futura
+	uppercase()
+	letter-spacing: .085em
+	selection-color($black)
 
 // font stack
 $heading-font-stack	= 'JeanLuc', sans-serif
-$xxx = "futura-pt",sans-serif
+$futura = "futura-pt",sans-serif
 $base-font-stack 	= 'Georgia', serif
 
 // simplified font-size syntax ??? 
@@ -90,14 +97,17 @@ standard-type()
 	font-size(16)
 	line-height: 1.5
 	color $black
+	font-family: $futura
+	font-weight: 400
 	@media $break-point-1
 		font-size(17)
 
 medium-type()
 	font-size(22)
 	line-height: 1.4
-	font-weight: bold
-	font-family: $xxx
+	font-family: $futura
+	font-weight: 700
+	selection-color($highlight)
 	@media $break-point-2
 		font-size(24)
 
@@ -124,6 +134,9 @@ capitalize()
 	
 uppercase()
 	text-transform: uppercase
+
+body
+	font-family: $futura
 
 // style ALL editorial type here / within some scoped class...
 .editorial, .editorial-example
@@ -163,12 +176,13 @@ uppercase()
 	p //
 		standard-type()
 		margin-bottom: $pad*2
-		font-style: italic
+		// font-style: italic
 		standard-type()
 		a //
 			color: orange
 		strong
-			font-weight: 700
+			special()
+			
 		em //
 			font-style: italic
 
