@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('inspiration');
   this.route('style-guide');
   this.route('secret-about');
+  this.route('faqs');
 });
 
 export default Router;
