@@ -21,6 +21,9 @@ webfont(family, file, hack-chrome-windows = false, weight = 'normal')
 
 webfont('JeanLuc', 'jeanlucweb-thin', true, 'normal')
 
+$book = 400
+$heavy = 700
+
 // type reset
 h1, h2, h3, h4, h5, h6, li, p
 	margin: 0
@@ -66,7 +69,18 @@ special()
 // font stack
 $heading-font-stack	= 'JeanLuc', sans-serif
 $futura = "futura-pt",sans-serif
+
 $base-font-stack 	= 'Georgia', serif
+
+// case
+lowercase()
+	text-transform: lowercase
+
+capitalize()
+	text-transform: sentencecase
+
+uppercase()
+	text-transform: uppercase
 
 // simplified font-size syntax ??? 
 size($font-size)
@@ -93,23 +107,26 @@ small-type()
 		font-size(14)
 
 standard-type()
-	copy()
-	font-size(16)
+	// copy()
+	font-size: 16px
 	line-height: 1.5
 	color $black
 	font-family: $futura
-	font-weight: 400
+	font-weight: $book
+	letter-spacing: .08em
+	strong
+		special()
 	@media $break-point-1
-		font-size(17)
+		// font-size(17)
 
 medium-type()
-	font-size(22)
+	font-size(18)
 	line-height: 1.4
 	font-family: $futura
-	font-weight: 700
+	font-weight: $book
 	selection-color($highlight)
 	@media $break-point-2
-		font-size(24)
+		font-size(19)
 
 large-type()
 	font-family: $heading-font-stack
@@ -120,73 +137,113 @@ large-type()
 
 extra-large-type()
 	font-family: $heading-font-stack
-	font-size(34)
-	line-height: 1.4
+	font-size: 50px
+	line-height: 1
+	color: $color-dark
 	@media $break-point-2
-		font-size(38)
+		font-size(60)
 
-// case
-lowercase()
-	text-transform: lowercase
-	
-capitalize()
-	text-transform: sentencecase
-	
-uppercase()
-	text-transform: uppercase
 
-body
-	font-family: $futura
+focus-voice()
+	medium-type()
+	span
+		background: $black
+		color: $white
+		padding: $pad*.5 $pad*.5
+		display: inline-block
+		margin-bottom: $pad*.5
 
-// style ALL editorial type here / within some scoped class...
-.editorial, .editorial-example
-	//
-	h1 //
-		extra-large-type()
+.focus-voice
+	focus-voice()
+
+calm-voice()
+	standard-type()
+	font-size: 18px
+	// color: red
+	@media $break-point-2
+		font-size: 19px
+
+.calm-voice
+	calm-voice()
+
+lyric-voice()
+	extra-large-type()
+
+.text-w.sticker-w
+	padding-bottom: 0
+
+.song-w
+	// border: 1px solid blue
+	padding: $pad
+	text-align: center
+	.lyric
+		lyric-voice()
+	&.light
+		background: $white
 		color: $black
-		margin-bottom: $pad
+	&.dark
+		background: $black
+		color: $white
+	&.come-as
+		text-align: center
+		padding: $pad 0
+		span
+			display: block
+	&.take-me-out
+		.lyric
+			font-size: 20px
 
-	h2 //
-		medium-type()
-		margin-bottom: $pad*2
+.text-w.fuck
+	padding: $pad*2 $pad
+	h2
+		calm-voice()
+
+.about
+	.image-w
+		position: relative
+
+.page-title
+	extra-large-type()
+
+
+type-setup()
+	h1
+		extra-large-type()
+	h2
+		focus-voice()
 	p + h2
-		margin-top: $pad*3
-
-	h3 //
-		medium-type()
-		color: $highlight
-		margin-bottom: $pad
-	p + h3
-		margin-top: $pad*3
-
-	h4 //
-		medium-type()
-		margin-bottom: $pad
-	p + h4
-		margin-top: $pad*3
-
-	h5 //
-		standard-type()
-		font-weight: bold
-		margin-bottom: $pad
-
-	p + h5
-		margin-top: $pad*3
-
-	p //
-		standard-type()
+		// margin-top: $pad*3
+	h3
+		calm-voice()
+	p
 		margin-bottom: $pad*2
-		// font-style: italic
-		standard-type()
-		a //
-			color: orange
-		strong
-			special()
-			
-		em //
-			font-style: italic
 
-	ul, ol
-		padding: $pad 0 $pad $pad*1.7
-		li //
-			margin-bottom $pad*.5
+.editorial
+	type-setup()
+	h1
+		border: 1px solid red
+	h2
+		border: 1px solid blue
+	h3
+		border: 1px solid green
+	p
+		border: 1px solid yellow
+
+.type-voice
+	article
+		type-setup()
+	.voice
+		margin-bottom: $pad*4
+	p
+		margin-bottom: 0 // 
+		&:not(:last-of-type)
+			margin-bottom: $pad*2
+
+
+
+
+
+// 	ul, ol
+// 		padding: $pad 0 $pad $pad*1.7
+// 		li //
+// 			margin-bottom $pad*.5

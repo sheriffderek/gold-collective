@@ -3,7 +3,10 @@ $mint = #98ff98
 
 html, body
 	height: 100%
-	// background: $black
+	background: $white
+
+body
+	standard-type()
 
 .image-w
 	responsive-image()
@@ -13,6 +16,7 @@ html, body
 	// border: 10px solid $white
 	background-position: cover
 	opacity: 0;
+	background: $black
 	li //
 		background-size: cover
 		min-height: 100%
@@ -36,18 +40,23 @@ figure
 	responsive-image()
 	max-width: 300px
 
-section.content
-	padding: 1rem
+.text-w
+	padding: $pad*.5
+
+.content
+	// padding: 1rem
 	// max-width: 800px
 	// border: 2px solid red
+	// .inner-w
+	// 	// padding-bottom: $pad*8
+	// 	// border: 2px solid blue
+	// @media $break-point-1
+	// 	padding: 1.5rem
+	// @media $break-point-2
+	// 	padding: 2rem
 	.inner-w
-		// padding-bottom: $pad*8
-		// border: 2px solid blue
-	@media $break-point-1
-		padding: 1.5rem
-	@media $break-point-2
-		padding: 2rem
-
+		padding: $pad
+		
 	@media $break-point-3
 		.inner-w
 			// margin: 0 auto
@@ -58,37 +67,31 @@ section.content
 		padding: $pad*4 0 $pad*16
 .type
 	//
-	h1 //
-		extra-large-type()
-	h2 //
-		medium-type()
-		color: red
-	h3 //
-		medium-type()
-	p //
-		standard()
+	// h1 //
+	// 	extra-large-type()
+	// h2 //
+	// 	medium-type()
+	// 	// color: red
+	// h3 //
+	// 	medium-type()
+	// p //
+	// 	standard()
 
 .portal
 	display: block
-	relative()
-	absolute-translate-center()
+	// border: 1px solid red
+	clear-fix()
+	color: $white
 	width: 100%
-	// border: 2px solid red
-	max-width: 95%
-	color: $mint
-	color: white
-	responsive-image()
-	div, svg
-		display: block
-		width: 100%
-		height: auto
-	> div
-		responsive-image()
+	max-width: 90%
+	absolute-translate-center()
+	div
 		// border: 3px solid blue
 	svg
+		display: block
 		// border: 3px solid yellow
 	@media $break-point-1
-		max-width: 90%
+		// max-width: 90%
 	@media $break-point-2
 		max-width: 82%
 
@@ -151,5 +154,67 @@ svg
 			special()
 			min-width: 70px
 
+.image-w
+	// relative()
+	.badge
+		absolute()
+		top: $pad
+		right: $pad
+		max-width: 38%
+		border-radius: 50%
+		overflow: hidden
+
+.style-guide
+	overflow: hidden
+	.inner-w
+		padding: $pad
+		
+
+
+.ember-load-indicator
+	absolute-translate-center()
+
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $black;
+  opacity: 0.8;
+  // background: $color
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
 
 

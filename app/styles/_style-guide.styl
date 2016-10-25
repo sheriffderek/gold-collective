@@ -7,87 +7,139 @@ $stylez = dotted
 // border(colour)
 // 	border $widthz $styles colour
 
-.basic
-	.site-title
-		large-icons()
-		* //
-			balance()
 
-basic-example()
-	padding: $pad
-	background: $colorz
-
-.container.basic-example
-	basic-example()
-	border: 1px $stylez $color
-	span //
-		border: 1px $stylez $color
-		color: $color
-	.inner-w
-		basic-example()
-		margin-: ($pad*2)
-		border: 1px $stylez $highlight
-		span //
-			border: 1px $stylez $highlight
-			color: $highlight
-	.block-list
-		basic-example()
-		border: 1px $stylez $black
-		span //
-			border: 1px $stylez $black
-			color: $black
-	.block
-		basic-example()
-		margin-bottom: ($pad*5)
-		border: 1px $stylez $alternate
-		span //
-			border: 1px $stylez $alternate
-			color: $alternate
-	.image-w
-		relative()
-		basic-example()
-		padding: 0
-		margin-bottom: ($pad*2)
-		border: 1px $stylez $color
-		span //
-			absolute()
-			top: 0
-			left: ($pad/2)
-			transform: translate( $pad, -50% )
-			border: 1px $stylez $color
-			color: $color
-	.text-w
-		basic-example()
-		border: 1px $stylez $color
-		span //
-			border: 1px $stylez $color
-			color: $color
-	span //
-		display: inline-block
-		transform: translate( ($pad/2), -83%)
-		background: $gray-lighter
-		font-size: 12px
-		padding: .5rem
-	.column
+.style-guide
+	//
+	.container
+		margin-bottom: $pad*6
+	.page-title
 		//
-		@media $break-point-2
-			&:nth-of-type(1)
-				width: 64%
-				float: left
-			&:nth-of-type(2)
-				width: 34%
-				float: right
+	.section-heading
+		calm-voice()
+		color: $color-dark
+		border-bottom: 1px solid $gray
+		margin-bottom: $pad
+	.font
+		&:not(:last-of-type)
+			margin-bottom: $pad*4
+		&.heading
+			large-type()
+			font-family: $heading-font-stack
+			line-height: 1.2
+		&.body
+			standard-type()
+			font-family: $futura
+		.large
+			font-size: 40px
+			line-height: 1.2
+		.normal
+			font-size: 16px
+	.flag
+		font-family: monospace
+		display: block
+		background: $gray-lighter
+		padding: $pad*.5 $pad
+		small-type()
+
+
+// .basic
+// 	.site-title
+// 		large-icons()
+// 		* //
+// 			balance()
+
+
+
+
+// basic-example()
+// 	padding: $pad
+// 	background: $colorz
+
+// .container.basic-example
+// 	basic-example()
+// 	border: 1px $stylez $color
+// 	span //
+// 		border: 1px $stylez $color
+// 		color: $color
+// 	.inner-w
+// 		basic-example()
+// 		margin: $pad*2
+// 		padding: $pad
+// 		border: 1px $stylez $highlight
+// 		span //
+// 			border: 1px $stylez $highlight
+// 			color: $highlight
+// 	.block-list
+// 		basic-example()
+// 		border: 1px $stylez $black
+// 		span //
+// 			border: 1px $stylez $black
+// 			color: $black
+// 	.block
+// 		basic-example()
+// 		margin-bottom: ($pad*5)
+// 		border: 1px $stylez $alternate
+// 		span //
+// 			border: 1px $stylez $alternate
+// 			color: $alternate
+// 	.image-w
+// 		relative()
+// 		basic-example()
+// 		padding: 0
+// 		margin-bottom: ($pad*2)
+// 		border: 1px $stylez $color
+// 		span //
+// 			absolute()
+// 			top: 0
+// 			left: ($pad/2)
+// 			transform: translate( $pad, -50% )
+// 			border: 1px $stylez $color
+// 			color: $color
+// 	.text-w
+// 		basic-example()
+// 		border: 1px $stylez $color
+// 		span //
+// 			border: 1px $stylez $color
+// 			color: $color
+// 	span //
+// 		display: inline-block
+// 		transform: translate( ($pad/2), -83%)
+// 		background: $gray-lighter
+// 		font-size: 12px
+// 		padding: .5rem
+// 	.column
+// 		//
+// 		@media $break-point-2
+// 			&:nth-of-type(1)
+// 				width: 64%
+// 				float: left
+// 			&:nth-of-type(2)
+// 				width: 34%
+// 				float: right
+
+
+// /*
+// generate-swatch(color)
+// 	&:color
+// 		.name
+// 			&:after
+// 				content: 'color'
+// 		.hex
+// 			&:after
+// 				content: '' + color
+// */
 
 // swatches
-.swatches
+.swatch-list
 	padding-bottom: 30px
-	div //
+	.swatch //
 		width: 100%
 		float: left
 		padding: .3rem
-		text-shadow: 0 0 2px alpha(white, .5)
+		// text-shadow: 0 0 2px alpha(white, .5)
 		transition: .3s padding ease-in
-
+		min-height: 60px
+		small-type()
 		@media $break-point-1
 			padding: .6rem
 			split-in(3)
@@ -100,8 +152,20 @@ basic-example()
 
 		&.black
 			background: $black
+			color: alpha($white, .5)
+			.name
+				&:after
+					content: '$black'
+			.hex
+				&:after
+					content: '' + $black
 		&.white
-			background: $white
+			.name
+				&:after
+					content: '$white'
+			.hex
+				&:after
+					content: '' + $white
 		&.gray-dark
 			background: $gray-dark
 		&.gray
@@ -110,12 +174,36 @@ basic-example()
 			background: $gray-light
 		&.gray-lighter
 			background: $gray-lighter
+			.name
+				&:after
+					content: '$gray-lighter'
+			.hex
+				&:after
+					content: '' + $gray-lighter
 		&.color-light
 			background: $color-light
+			.name
+				&:after
+					content: '$color-light'
+			.hex
+				&:after
+					content: '' + $color-light
 		&.color
 			background: $color
+			.name
+				&:after
+					content: '$color'
+			.hex
+				&:after
+					content: '' + $color
 		&.color-dark
 			background: $color-dark
+			.name
+				&:after
+					content: '$color-dark'
+			.hex
+				&:after
+					content: '' + $color-dark
 		&.highlight-light
 			background: $highlight-light
 		&.highlight
