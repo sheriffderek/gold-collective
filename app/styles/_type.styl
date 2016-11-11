@@ -94,7 +94,7 @@ extra-small-type()
 	copy()
 	font-size(10)
 	line-height: 1.4
-	color: $gray
+	// color: $gray
 	@media $break-point-2
 		font-size(11)
 
@@ -102,7 +102,7 @@ small-type()
 	copy()
 	font-size(13)
 	line-height: 1.4
-	color: $gray-dark
+	// color: $gray-dark
 	@media $break-point-2
 		font-size(14)
 
@@ -110,7 +110,7 @@ standard-type()
 	// copy()
 	font-size: 16px
 	line-height: 1.5
-	color $black
+	// color $black
 	font-family: $futura
 	font-weight: $book
 	letter-spacing: .08em
@@ -137,15 +137,14 @@ large-type()
 
 extra-large-type()
 	font-family: $heading-font-stack
-	font-size: 50px
+	font-size: 33px
 	line-height: 1
-	color: $color-dark
+	// color: $color-dark
 	@media $break-point-2
-		font-size(60)
-
+		font-size: 40px
 
 focus-voice()
-	medium-type()
+	standard-type()
 	span
 		background: $black
 		color: $white
@@ -176,8 +175,8 @@ lyric-voice()
 	// border: 1px solid blue
 	padding: $pad
 	text-align: center
-	.lyric
-		lyric-voice()
+	lyric-voice()
+	//
 	&.light
 		background: $white
 		color: $black
@@ -186,12 +185,18 @@ lyric-voice()
 		color: $white
 	&.come-as
 		text-align: center
-		padding: $pad 0
+		padding: $pad*2 0
+		font-size: 70px
 		span
 			display: block
 	&.take-me-out
+		font-size: 30px
+		padding: $pad*2
 		.lyric
-			font-size: 20px
+			span
+				display: block
+	&.its-a
+		padding: $pad*10 0
 
 .text-w.fuck
 	padding: $pad*2 $pad
@@ -216,7 +221,8 @@ type-setup()
 	h3
 		calm-voice()
 	p
-		margin-bottom: $pad*2
+		&:not(:last-of-type)
+			margin-bottom: $pad*2
 
 .editorial
 	type-setup()
@@ -238,7 +244,6 @@ type-setup()
 		margin-bottom: 0 // 
 		&:not(:last-of-type)
 			margin-bottom: $pad*2
-
 
 
 

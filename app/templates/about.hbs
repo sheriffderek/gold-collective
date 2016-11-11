@@ -1,14 +1,13 @@
 
 <section class='container about editorial'>
 <div class='inner-w'>
-	
+
 	{{#adopt-orphans}}
 
 		<div class='text-w sticker-w'>
-			{{!-- {{{model.acf.about_intro_1}}} --}}
-			<h2>
-				<span>We’ve</span><span>been</span><span>shooting</span><span>weddings</span><span>for</span><span>a</span><span>long</span><span>time.</span><span>We</span><span>do</span><span>it</span><span>because</span><span>we</span><span>love</span><span>it.</span>
-			</h2>
+			{{#blast-focus}}
+				{{{model.acf.about_intro_1}}}
+			{{/blast-focus}}
 		</div>
 
 		<div class='image-w'>
@@ -16,18 +15,19 @@
 		</div>
 
 		<div class='text-w sticker-w'>
-			<h2>
-				<span>We’ve</span><span>been</span><span>shooting</span><span>weddings</span><span>for</span><span>a</span><span>long</span><span>time.</span><span>We</span><span>do</span><span>it</span><span>because</span><span>we</span><span>love</span><span>it.</span>
-			</h2>
-			{{!-- {{{model.acf.about_intro_2}}} --}}
+			{{#blast-focus}}
+				{{{model.acf.about_intro_2}}}
+			{{/blast-focus}}
 		</div>
 
 		<div class='song-w light come-as'>
 			<div class='lyric'>
-				<span>Come</span>
-				<span>as</span>
-				<span>you</span>
-				<span>are</span>
+				{{#fit-text min='20px' max='600px' compressor='.5'}}
+					<span>Come</span>
+					<span>as</span>
+					<span>you</span>
+					<span>are</span>
+				{{/fit-text}}
 			</div>
 		</div>
 
@@ -52,10 +52,13 @@
 
 		<div class='song-w light take-me-out'>
 			<div class='lyric'>
-				<span>Take me out tonight</span>
-				<span>Where there is music</span>
-				<span>and there's people and</span>
-				<span>they are yound and alive</span>
+				{{#fit-text min='20px' max='600px' compressor='1'}}
+					<span>Take me out tonight</span>
+					<span>Where there is music</span>
+					<span>and there's people </span>
+					<span>and they are</span>
+					<span>young and&nbsp;alive</span>
+				{{/fit-text}}
 			</div>
 		</div>
 
@@ -63,7 +66,7 @@
 			<img src='{{model.acf.about_song_2.sizes.large}}' alt=''>
 		</div> --}}
 
-		<div class='image-w'>
+		<div class='image-w cake'>
 			<img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
 		</div>
 
@@ -73,43 +76,44 @@
 
 
 
-	
-		<div class='image-w'>
+
+		<div class='image-w pillow'>
 			<img src='{{model.acf.about_image_5.sizes.large}}' alt=''>
 		</div>
 
 		<div class='text-w'>
-		{{{model.acf.about_press}}}
-
-		{{{model.acf.about_intro_4}}}
-
+			{{{model.acf.about_press}}}
 		</div>
 
-
-		<div class='image-w'>
+		<div class='image-w pool'>
 			<img src='{{model.acf.about_image_6.sizes.large}}' alt=''>
 		</div>
 
-{{!-- 		<div class='image-w'>
-			<img src='{{model.acf.about_song_3.sizes.large}}' alt=''>
-		</div> --}}
+		<div class='text-w'>
+			{{{model.acf.about_intro_4}}}
+		</div>
 
 		<div class='song-w dark its-a'>
 			<div class='lyric'>
-				<span>Its a</span>
-				<span>nice day</span>
-				<span>for a</span>
-				<span>white</span>
-				<span>wedding</span>
+				{{#fit-text min='20px' max='600px' compressor='1'}}
+					<span>Its a</span>
+					<span>nice day</span>
+					<span>for a</span>
+					<span>white</span>
+					<span>wedding</span>
+				{{/fit-text}}
 			</div>
 		</div>
 
 	{{/adopt-orphans}}
 
-	<footer>
+	<footer class='cta'>
 		<div class='text-w'>
 			{{#link-to 'contact' class='button inquire'}}
 				<span>Inquire</span>
+			{{/link-to}}
+			{{#link-to 'faqs' class='button faq'}}
+				<span>FAQs</span>
 			{{/link-to}}
 		</div>
 	</footer>

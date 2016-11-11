@@ -56,7 +56,7 @@ figure
 	// 	padding: 2rem
 	.inner-w
 		padding: $pad
-		
+
 	@media $break-point-3
 		.inner-w
 			// margin: 0 auto
@@ -80,7 +80,7 @@ figure
 .portal
 	display: block
 	// border: 1px solid red
-	clear-fix()
+	clear-floats()
 	color: $white
 	width: 100%
 	max-width: 90%
@@ -105,21 +105,28 @@ svg
 	fill: currentColor
 
 
-.inquire
-	float: left
-	background: black
-	color: white
-	span
-		display: block
-		width: 100%
-		text-align: center
+.button
+	&.inquire, &.faq
+		// float: left
+		background: black
+		color: white
+		width: 49%
+		display: inline-block
+		vertical-align: middle
+		min-width auto
+		span
+			display: block
+			width: 100%
+			text-align: center
+	&.inquire
+		margin-right: 2%
 
 .contact-list
 	margin-bottom: $pad*12
 	li //
 		display: block
-		margin-bottom: $pad	
-		width: 100%	
+		margin-bottom: $pad
+		width: 100%
 		// border: 2px solid blue
 		float: left
 		a //
@@ -145,7 +152,7 @@ svg
 				outline: 3px solid black
 			&:hover
 				// background: black
-				color: white
+				// color: white
 				&:after
 					opacity: 1
 					transform: translate(-3px,0)
@@ -153,6 +160,13 @@ svg
 			display: inline-block
 			special()
 			min-width: 70px
+
+.blast-focus
+	//
+	h2
+		font-size: 0;
+		.blast
+			standard-type()
 
 .image-w
 	// relative()
@@ -168,18 +182,25 @@ svg
 	overflow: hidden
 	.inner-w
 		padding: $pad
-		
+
 
 
 .ember-load-indicator
-	absolute-translate-center()
-
+	z-index: 100
+	background: red
+	relative()
+	fixed()
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
 
 .spinner {
+	absolute-translate-center();
   width: 80px;
   height: 80px;
-  position: relative;
-  margin: 100px auto;
 }
 
 .double-bounce1, .double-bounce2 {
@@ -192,7 +213,7 @@ svg
   position: absolute;
   top: 0;
   left: 0;
-  
+
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
@@ -208,13 +229,30 @@ svg
 }
 
 @keyframes sk-bounce {
-  0%, 100% { 
+  0%, 100% {
     transform: scale(0.0);
     -webkit-transform: scale(0.0);
-  } 50% { 
+  } 50% {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
 }
 
 
+
+.cake
+	margin-bottom: $pad
+.pillow
+	margin: $pad 0
+.pool
+	margin: $pad 0
+
+
+.cta
+	// padding-bottom: $pad
+
+.legal
+	.inner-w
+		padding: $pad
+		padding-bottom: $pad*4
+		color: $gray-light
