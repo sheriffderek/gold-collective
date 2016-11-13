@@ -4,12 +4,23 @@ $mint = #98ff98
 html, body
 	height: 100%
 	background: $white
-
+	background: darken($white, 6%)
+	@media $break-point-2
+		//
 body
 	standard-type()
 
 .image-w
 	responsive-image()
+
+	&.photo
+		max-width: 800px
+		@media $break-point-2
+			margin-left: $pad*4
+			border: $pad solid $white
+			width: 80%
+			&.pool
+				transform: rotate(-1deg)
 
 .image-slider
 	fixed-cover()
@@ -41,7 +52,14 @@ figure
 	max-width: 300px
 
 .text-w
-	padding: $pad*.5
+	padding: $pad
+	&.sticker-w
+		padding: $pad*.5
+	@media $break-point-2
+		padding: $pad $pad*3
+
+.text-w.sticker-w
+	padding-bottom: 0
 
 .content
 	// padding: 1rem
@@ -77,6 +95,11 @@ figure
 	// p //
 	// 	standard()
 
+.about
+	// border: 10px solid red
+	@media $break-point-1
+		padding: 0
+
 .portal
 	display: block
 	// border: 1px solid red
@@ -104,6 +127,21 @@ figure
 svg
 	fill: currentColor
 
+.logo-header
+	padding: $pad*.5
+	width: 80%
+	max-width: 240px
+	margin-top: $pad*4
+	@media $break-point-1
+		// max-width: 300px
+
+
+.about
+	.logo-header
+		color: $black
+		color: $white
+		@media $break-point-2
+			color: $white
 
 .button
 	&.inquire, &.faq
@@ -111,6 +149,7 @@ svg
 		background: black
 		color: white
 		width: 49%
+		max-width: 200px
 		display: inline-block
 		vertical-align: middle
 		min-width auto
@@ -118,7 +157,7 @@ svg
 			display: block
 			width: 100%
 			text-align: center
-	&.inquire
+	&:first-of-type
 		margin-right: 2%
 
 .contact-list
@@ -164,9 +203,16 @@ svg
 .blast-focus
 	//
 	h2
+		max-width: 600px
 		font-size: 0;
 		.blast
 			standard-type()
+			@media $break-point-2
+				font-size: 20px
+
+.faqs
+	h1 + p
+		margin-top: $pad*4
 
 .image-w
 	// relative()
@@ -199,23 +245,24 @@ svg
 
 .spinner {
 	absolute-translate-center();
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
+	// width: 70%
+	// height: auto
+	// max-width: 200px
 }
 
 .double-bounce1, .double-bounce2 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: $black;
+  // background-color: $black;
   opacity: 0.8;
-  // background: $color
   position: absolute;
   top: 0;
   left: 0;
-
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
+  -webkit-animation: sk-bounce 1s infinite ease-in-out;
+  animation: sk-bounce 1s infinite ease-in-out;
 }
 
 .double-bounce2 {
@@ -224,29 +271,29 @@ svg
 }
 
 @-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
+  0%, 100% { -webkit-transform: scale(0.9) }
   50% { -webkit-transform: scale(1.0) }
 }
 
 @keyframes sk-bounce {
   0%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
   } 50% {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
 }
 
-
-
 .cake
 	margin-bottom: $pad
 .pillow
 	margin: $pad 0
 .pool
-	margin: $pad 0
-
+	margin-top: $pad
+	// border: 10px solid red
+	@media $break-point-2
+		margin: $pad*3 0
 
 .cta
 	// padding-bottom: $pad
@@ -256,3 +303,69 @@ svg
 		padding: $pad
 		padding-bottom: $pad*4
 		color: $gray-light
+		max-width: 800px
+		@media $break-point-3
+			margin-left: 10%
+			max-width: 800px
+
+// .yyy
+// 	relative()
+// 	top: $pad*3
+// 	z-index: 5
+// 	transform: rotate(-2deg)
+//
+// .xxx
+// 	relative()
+// 	margin-top: $pad*2
+// 	// top: -30px
+
+.about
+	overflow: hidden!important
+	// border: 2px solid yellow
+
+p
+	max-width: 740px
+
+.song-w
+	// border: 1px solid blue
+	padding: $pad
+	text-align: center
+	lyric-voice()
+	//
+	&.light
+		// background: $white
+		color: $black
+		@media $break-point-2
+			background: darken($white, 5%)
+	&.dark
+		background: $black
+		color: $white
+	&.come-as
+		text-align: center
+		padding: $pad*6 0
+		font-size: 70px
+		span
+			display: block
+		@media $break-point-1
+			padding: $pad*6 0
+		@media $break-point-2
+			padding: $pad*10 0
+			// position: absolute
+			// top: 0
+			// left: 330px
+			// width: 1400px
+			// color: white
+			// background: transparent
+			// z-index: 0
+			// transform: rotate(1deg)
+	&.take-me-out
+		font-size: 30px
+		padding: $pad*2
+		.lyric
+			span
+				display: block
+	&.its-a
+		padding: $pad*10 0
+
+.photo
+	z-index: 10

@@ -2,19 +2,23 @@
 <section class='container about editorial'>
 <div class='inner-w'>
 
+	<header class='logo-header'>
+		{{gold-logo}}
+	</header>
+
 	{{#adopt-orphans}}
 
-		<div class='text-w sticker-w'>
+		<div class='text-w sticker-w yyy'>
 			{{#blast-focus}}
 				{{{model.acf.about_intro_1}}}
 			{{/blast-focus}}
 		</div>
 
-		<div class='image-w'>
+		<div class='image-w pool'>
 			<img src='{{model.acf.about_image_1.sizes.large}}' alt=''>
 		</div>
 
-		<div class='text-w sticker-w'>
+		<div class='text-w sticker-w xxx'>
 			{{#blast-focus}}
 				{{{model.acf.about_intro_2}}}
 			{{/blast-focus}}
@@ -31,22 +35,18 @@
 			</div>
 		</div>
 
-{{!-- 		<div class='image-w'>
-			<img src='{{model.acf.about_song_1.sizes.large}}' alt=''>
-		</div>
- --}}
-		<div class='image-w'>
+		<div class='image-w photo kiss'>
 			<img src='{{model.acf.about_image_2.sizes.large}}' alt=''>
 			<div class='image-w badge'>
 				<img src='../images/lyrics/to-die.png' alt=''>
 			</div>
 		</div>
 
-		<div class='text-w fuck'>
+		<div class='text-w'>
 			{{{model.acf.about_intro_3}}}
 		</div>
 
-		<div class='image-w'>
+		<div class='image-w photo'>
 			<img src='{{model.acf.about_image_3.sizes.large}}' alt=''>
 		</div>
 
@@ -62,35 +62,25 @@
 			</div>
 		</div>
 
-{{!-- 		<div class='image-w'>
-			<img src='{{model.acf.about_song_2.sizes.large}}' alt=''>
-		</div> --}}
-
-		<div class='image-w cake'>
+		<div class='image-w photo cake'>
 			<img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
 		</div>
 
 		<div class='text-w'>
-			{{{model.acf.about_character}}}
+			{{!-- {{{model.acf.about_character}}} --}}
+			{{generic-toggle word='Character / Working with us' content=model.acf.about_character}}
 		</div>
 
-
-
-
-		<div class='image-w pillow'>
+		<div class='image-w photo pillow'>
 			<img src='{{model.acf.about_image_5.sizes.large}}' alt=''>
 		</div>
 
 		<div class='text-w'>
-			{{{model.acf.about_press}}}
+			{{generic-toggle word='Press / Contact / Our Work' content=model.acf.about_press}}
 		</div>
 
-		<div class='image-w pool'>
+		<div class='image-w photo pool-party'>
 			<img src='{{model.acf.about_image_6.sizes.large}}' alt=''>
-		</div>
-
-		<div class='text-w'>
-			{{{model.acf.about_intro_4}}}
 		</div>
 
 		<div class='song-w dark its-a'>
@@ -105,18 +95,22 @@
 			</div>
 		</div>
 
-	{{/adopt-orphans}}
-
-	<footer class='cta'>
 		<div class='text-w'>
-			{{#link-to 'contact' class='button inquire'}}
-				<span>Inquire</span>
-			{{/link-to}}
-			{{#link-to 'faqs' class='button faq'}}
-				<span>FAQs</span>
-			{{/link-to}}
+			{{{model.acf.about_intro_4}}}
 		</div>
-	</footer>
+
+		<footer class='cta'>
+			<div class='text-w'>
+				{{#link-to 'faqs' class='button faq'}}
+					<span>FAQs</span>
+				{{/link-to}}
+				{{#link-to 'contact' class='button inquire'}}
+					<span>Inquire</span>
+				{{/link-to}}
+			</div>
+		</footer>
+
+	{{/adopt-orphans}}
 
 </div>
 </section>

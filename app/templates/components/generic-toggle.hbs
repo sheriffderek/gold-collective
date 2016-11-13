@@ -1,0 +1,9 @@
+
+{{#if isOpen}}
+  {{{content}}}
+  {{!-- <button {{action 'toggle'}}>XXX</button> --}}
+{{else}}
+  <a {{action 'toggle'}}><p><strong>{{word}}</strong></p>
+    <span>>>></span>
+  </a>
+{{/if}}

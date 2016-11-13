@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('style-guide');
   this.route('secret-about');
   this.route('faqs');
+  this.route('investment');
 });
 
 export default Router;

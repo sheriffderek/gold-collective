@@ -8,8 +8,8 @@ webfont(family, file, hack-chrome-windows = false, weight = 'normal')
     font-family family
     src url(font-url(file + '.eot'))
     src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
-        url(font-url(file + '.woff')) format('woff'), 
-        url(font-url(file + '.ttf')) format('truetype'), 
+        url(font-url(file + '.woff')) format('woff'),
+        url(font-url(file + '.ttf')) format('truetype'),
         url(font-url(file + '.svg#'+ family)) format('svg')
     font-weight weight
     font-style normal
@@ -82,7 +82,7 @@ capitalize()
 uppercase()
 	text-transform: uppercase
 
-// simplified font-size syntax ??? 
+// simplified font-size syntax ???
 size($font-size)
 	font-size: ($font-size)px
 
@@ -168,40 +168,12 @@ calm-voice()
 lyric-voice()
 	extra-large-type()
 
-.text-w.sticker-w
-	padding-bottom: 0
 
-.song-w
-	// border: 1px solid blue
-	padding: $pad
-	text-align: center
-	lyric-voice()
-	//
-	&.light
-		background: $white
-		color: $black
-	&.dark
-		background: $black
-		color: $white
-	&.come-as
-		text-align: center
-		padding: $pad*2 0
-		font-size: 70px
-		span
-			display: block
-	&.take-me-out
-		font-size: 30px
-		padding: $pad*2
-		.lyric
-			span
-				display: block
-	&.its-a
-		padding: $pad*10 0
 
-.text-w.fuck
-	padding: $pad*2 $pad
-	h2
-		calm-voice()
+// .text-w.fuck
+// 	// padding: $pad*2 $pad
+// 	h2
+// 		calm-voice()
 
 .about
 	.image-w
@@ -226,14 +198,14 @@ type-setup()
 
 .editorial
 	type-setup()
-	h1
-		border: 1px solid red
-	h2
-		border: 1px solid blue
-	h3
-		border: 1px solid green
-	p
-		border: 1px solid yellow
+	// h1
+	// 	border: 1px solid red
+	// h2
+	// 	border: 1px solid blue
+	// h3
+	// 	border: 1px solid green
+	// p
+	// 	border: 1px solid yellow
 
 .type-voice
 	article
@@ -241,7 +213,7 @@ type-setup()
 	.voice
 		margin-bottom: $pad*4
 	p
-		margin-bottom: 0 // 
+		margin-bottom: 0 //
 		&:not(:last-of-type)
 			margin-bottom: $pad*2
 
