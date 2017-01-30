@@ -4,7 +4,7 @@ $mint = #98ff98
 html, body
 	height: 100%
 	background: $white
-	background: darken($white, 6%)
+	// background: darken($white, 6%)
 	@media $break-point-2
 		//
 body
@@ -82,7 +82,7 @@ figure
 			max-width: 800px
 			// transform: translate(5%, 0)
 	footer
-		padding: $pad*4 0 $pad*16
+		padding: $pad*4 0 $pad*4
 .type
 	//
 	// h1 //
@@ -95,8 +95,13 @@ figure
 	// p //
 	// 	standard()
 
+.fade-in
+	opacity: 0
+
 .about
-	// border: 10px solid red
+	//
+	.cta
+		padding-bottom: $pad*4
 	@media $break-point-1
 		padding: 0
 
@@ -132,6 +137,7 @@ svg
 	width: 80%
 	max-width: 240px
 	margin-top: $pad*4
+	display: none
 	@media $break-point-1
 		// max-width: 300px
 
@@ -161,7 +167,10 @@ svg
 		margin-right: 2%
 
 .contact-list
-	margin-bottom: $pad*12
+	margin-top: $pad*2
+	margin-bottom: 0
+	// border: 1px solid red
+	clear-floats()
 	li //
 		display: block
 		margin-bottom: $pad
@@ -171,47 +180,82 @@ svg
 		a //
 			relative()
 			display: block
-			padding: $pad*.5 0
+			padding: $pad*.3 0
 			// border: 1px solid red
 			float: left
 			// transition: .2s
-			&:after
-				absolute()
-				content: ''
-				top: 0
-				left: 0
-				width: 105%
-				height: 100%
-				background: black
-				z-index: -1
-				transform: translate(-3px,0)
-				opacity: 0
-				// transition: .2s
-				// transition-delay: .2s
-				outline: 3px solid black
-			&:hover
-				// background: black
-				// color: white
-				&:after
-					opacity: 1
-					transform: translate(-3px,0)
+			// &:after
+			// 	absolute()
+			// 	content: ''
+			// 	top: 0
+			// 	left: 0
+			// 	width: 105%
+			// 	height: 100%
+			// 	background: black
+			// 	z-index: -1
+			// 	transform: translate(-3px,0)
+			// 	opacity: 0
+			// 	// transition: .2s
+			// 	// transition-delay: .2s
+			// 	outline: 3px solid black
+			// &:hover
+			// 	// background: black
+			// 	// color: white
+			// 	&:after
+			// 		opacity: 1
+			// 		transform: translate(-3px,0)
+		.title, .content
+			float: left
+			clear: left
+			@media $break-point-1
+				float: none
+				clear: none
 		.title
-			display: inline-block
-			special()
-			min-width: 70px
+			tape()
+			// special()
+			// min-width: 60px
+		.content
+			@media $break-point-1
+				margin-left: $pad
+
+.tape, .magic
+	tape()
+	font-size: 24px
+	height: 40px
+	line-height: 24px
+
+.social
+	margin-top: $pad
+
+.social-list
+	li
+		display: inline-block
+	a
+		tape()
+		background: $color
+
+.iframe-w
+	margin-top: $pad*4
+	// background: alpha($black, 1)
+	width: calc(100% + .8rem)
+	// border: 1px solid red
+	right: $pad*.5
+	relative()
 
 .blast-focus
 	//
-	h2
+	h2, p
 		max-width: 600px
 		font-size: 0;
 		.blast
 			standard-type()
 			@media $break-point-2
 				font-size: 20px
+	.title
+		display: inline-block
 
-.faqs
-	h1 + p
+.faqs, .investment, .contact
+	h1 + p, h1 + h2
 		margin-top: $pad*4
 
 .image-w
@@ -228,6 +272,10 @@ svg
 	overflow: hidden
 	.inner-w
 		padding: $pad
+
+.embed #lc_form
+	padding: 0
+	margin: 0
 
 
 
@@ -297,6 +345,13 @@ svg
 
 .cta
 	// padding-bottom: $pad
+	.text-w
+		// padding: 0
+
+.faqs, .investment
+	.cta
+		.text-w
+			padding: 0
 
 .legal
 	.inner-w
@@ -342,7 +397,7 @@ p
 		color: $white
 	&.come-as
 		text-align: center
-		padding: $pad*6 0
+		padding: $pad*4 0
 		font-size: 70px
 		span
 			display: block

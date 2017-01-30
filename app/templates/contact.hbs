@@ -1,29 +1,46 @@
 
-<section class='container about content'>
+<section class='container content editorial about contact'>
 <div class='inner-w'>
 
-	<div class='text-w editorial' >
-		<h1>Contact</h1>
-		{{!-- {{#blast-focus}}
-			{{{model.content}}}
-		{{/blast-focus}} --}}
-		{{{model.content}}}
-	</div>
+	<h1>Contact</h1>
+
+	{{{model.content}}}
 
 	<ul class='contact-list'>
 		<li>
-			<a href='mailto:studio@thisisthegoldcollective.com'>
-				<span class='title'><strong>Email</strong></span>
-				<span class='content'>studio@thisisthegoldcollective.com</span>
-			</a>
-		</li>
-		<li>
 			<a href='tel:310-721-1451'>
-				<span class='title'><strong>Call</strong></span>
+				<span class='title'>Call</span>
 				<span class='content'>310-721-1451</span>
 			</a>
 		</li>
+		<li>
+			<a href='mailto:studio@thisisthegoldcollective.com'>
+				<span class='title'>Email</span>
+				<span class='content'>studio@thisisthegoldcollective.com</span>
+			</a>
+		</li>
 	</ul>
+
+	<div class='social'>
+		<h2>Let's be friends 🙂</h2>
+		<ul class='social-list'>
+			<li>
+				<a href='{{social.instagram}}' target='instagram'>
+					Instagram
+				</a>
+			</li>
+			<li>
+				<a href='{{social.pinterest}}' target='pinterest'>
+					Pinterest
+				</a>
+			</li>
+			<li>
+				<a href='{{social.facebook}}' target='facebook'>
+					Facebook
+				</a>
+			</li>
+		</ul>
+	</div>
 
 	{{contact-form}}
 

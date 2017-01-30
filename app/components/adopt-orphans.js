@@ -7,7 +7,11 @@ export default Ember.Component.extend({
   classNames: 'adopt-orphans',
   didInsertElement() {
     this.$('h1,h2,h3,li,p').each(function() {
-      $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
+      var regexed = $(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1')
+      console.log( $(this).html() );
+      if ( $(window).width() > 600) {
+        $(this).html(regexed); // ??? $revisit
+      }
     });
   }
 });
