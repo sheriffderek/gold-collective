@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'section',
-  classNames: ['container', 'about', 'editorial', 'fade-in'],
+  classNames: ['container', 'content', 'about', 'editorial', 'fade-in'],
 
-  didRender() {
+  didInsertElement() {
     const $thisComponent = this.$();
-    $thisComponent.velocity({
-      opacity: 1,
-    }, {
-      delay: 500,
-      duration: 400,
-    });
-  }
+    // $thisComponent.velocity({
+    //   opacity: 1,
+    // }, {
+    //   delay: 500,
+    //   duration: 400,
+    // });
+  },
 });

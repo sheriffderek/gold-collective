@@ -5,110 +5,149 @@
     {{gold-logo}}
   </header>
 
-  {{#adopt-orphans}}
 
-    <div class='text-w sticker-w yyy'>
-      {{#blast-focus}}
-        {{{model.acf.about_intro_1}}}
-      {{/blast-focus}}
-    </div>
-
-    <div class='image-w pool'>
-      <img src='{{model.acf.about_image_1.sizes.large}}' alt=''>
-    </div>
-
-    <div class='text-w sticker-w xxx'>
-      {{#blast-focus}}
-        {{{model.acf.about_intro_2}}}
-      {{/blast-focus}}
-    </div>
-
-    <div class='song-w light come-as'>
-      <div class='lyric'>
-        {{#fit-text min='20px' max='600px' compressor='.5'}}
-          <span>Come</span>
-          <span>as</span>
-          <span>you</span>
-          <span>are</span>
-        {{/fit-text}}
+  <div class="phone">
+    {{#adopt-orphans}}
+      <div class='text-w sticker-w yyy'>
+        {{#blast-focus}}
+          {{{model.acf.about_intro_1}}}
+        {{/blast-focus}}
       </div>
-    </div>
 
-    <div class='image-w photo kiss'>
-      <img src='{{model.acf.about_image_2.sizes.large}}' alt=''>
-      <div class='image-w badge'>
-        <img src='../images/lyrics/to-die.png' alt=''>
+      <div class='image-w pool'>
+        <img src='{{model.acf.about_image_1.sizes.large}}' alt=''>
       </div>
-    </div>
 
-    <div class='text-w'>
-      {{{model.acf.about_intro_3}}}
-    </div>
-
-    <div class='image-w photo'>
-      <img src='{{model.acf.about_image_3.sizes.large}}' alt=''>
-    </div>
-
-    <div class='song-w light take-me-out'>
-      <div class='lyric'>
-        {{#fit-text min='20px' max='600px' compressor='1'}}
-          <span>Take me out tonight</span>
-          <span>Where there is music</span>
-          <span>and there's people </span>
-          <span>and they are</span>
-          <span>young and&nbsp;alive</span>
-        {{/fit-text}}
+      <div class='text-w sticker-w xxx'>
+        {{#blast-focus}}
+          {{{model.acf.about_intro_2}}}
+        {{/blast-focus}}
       </div>
-    </div>
 
-    <div class='image-w photo cake'>
-      <img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
-    </div>
-
-    <div class='text-w'>
-      {{!-- {{{model.acf.about_character}}} --}}
-      {{generic-toggle word='Character / Working with us' content=model.acf.about_character}}
-    </div>
-
-    <div class='image-w photo pillow'>
-      <img src='{{model.acf.about_image_5.sizes.large}}' alt=''>
-    </div>
-
-    <div class='text-w'>
-      {{generic-toggle word='Press / Contact / Our Work' content=model.acf.about_press}}
-    </div>
-
-    <div class='image-w photo pool-party'>
-      <img src='{{model.acf.about_image_6.sizes.large}}' alt=''>
-    </div>
-
-    <div class='song-w dark its-a'>
-      <div class='lyric'>
-        {{#fit-text min='20px' max='600px' compressor='1'}}
-          <span>Its a</span>
-          <span>nice day</span>
-          <span>for a</span>
-          <span>white</span>
-          <span>wedding</span>
-        {{/fit-text}}
+      <div class='song-w light come-as'>
+        <div class='lyric'>
+          {{#fit-text min='20px' max='600px' compressor='.5'}}
+            <span>Come</span>
+            <span>as</span>
+            <span>you</span>
+            <span>are</span>
+          {{/fit-text}}
+        </div>
       </div>
-    </div>
 
-    <div class='text-w'>
-      {{{model.acf.about_intro_4}}}
-    </div>
+      <div class='image-w photo kiss'>
+        <img src='{{model.acf.about_image_2.sizes.large}}' alt=''>
+        <div class='image-w badge'>
+          <img src='../images/lyrics/to-die.png' alt=''>
+        </div>
+      </div>
 
-    <footer class='cta'>
+      <div class='text-w photo-row'>
+        <ul class="photo-list">
+          <li class='image-w table'>
+            <img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
+          </li>
+          <li class='image-w table'>
+            <img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
+          </li>
+          <li class='image-w table'>
+            <img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
+          </li>
+        </ul>
+      </div>
+
       <div class='text-w'>
-        {{#link-to 'faqs' class='button faq'}}
-          <span>FAQs</span>
-        {{/link-to}}
-        {{#link-to 'contact' class='button inquire'}}
-          <span>Inquire</span>
-        {{/link-to}}
+        {{{model.acf.about_intro_3}}}
       </div>
-    </footer>
 
-  {{/adopt-orphans}}
+      <div class='image-w photo laughing'>
+        <img src='{{model.acf.about_image_3.sizes.large}}' alt=''>
+      </div>
+
+      <div class='song-w light take-me-out'>
+        <div class='lyric'>
+          {{#fit-text min='20px' max='600px' compressor='1'}}
+            <span>Take me out tonight</span>
+            <span>Where there is music</span>
+            <span>and there's people </span>
+            <span>and they are</span>
+            <span>young and&nbsp;alive</span>
+          {{/fit-text}}
+        </div>
+      </div>
+
+      <div class='image-w photo cake'>
+        <img src='{{model.acf.about_image_4.sizes.large}}' alt=''>
+      </div>
+
+      <div class='text-w'>
+        {{!-- {{{model.acf.about_character}}} --}}
+        {{generic-toggle word='Character / Working with us' content=model.acf.about_character}}
+      </div>
+
+      <div class='image-w photo pillow'>
+        <img src='{{model.acf.about_image_5.sizes.large}}' alt=''>
+      </div>
+
+      <div class='text-w'>
+        {{generic-toggle word='Press / Contact / Our Work' content=model.acf.about_press}}
+      </div>
+
+      <div class='image-w photo pool-party'>
+        <img src='{{model.acf.about_image_6.sizes.large}}' alt=''>
+      </div>
+
+      <div class='song-w dark its-a'>
+        <div class='lyric'>
+          {{#fit-text min='20px' max='600px' compressor='1'}}
+            <span>Its a</span>
+            <span>nice day</span>
+            <span>for a</span>
+            <span>white</span>
+            <span>wedding</span>
+          {{/fit-text}}
+        </div>
+      </div>
+
+      <div class='text-w'>
+        {{{model.acf.about_intro_4}}}
+      </div>
+
+      <footer class='cta'>
+        <div class='text-w'>
+          {{#link-to 'faqs' class='button faq'}}
+            <span>FAQs</span>
+          {{/link-to}}
+          {{#link-to 'contact' class='button inquire'}}
+            <span>Inquire</span>
+          {{/link-to}}
+        </div>
+      </footer>
+    {{/adopt-orphans}}
+  </div>
+
+
+  <div class="desktop editorial">
+    {{{model.acf.about_intro_1}}}
+
+    {{{model.acf.about_intro_2}}}
+
+    <div class="fuck">{{{model.acf.about_intro_3}}}</div>
+
+    <ul class="row">
+      {{#each model.acf.desktop_row as |row|}}
+        <li>
+          <img src="{{row.row-image}}" alt="">
+        </li>
+      {{/each}}
+    </ul>
+
+    <div>
+      {{{model.acf.about_character}}}
+
+      {{{model.acf.about_press}}}
+    </div>
+
+  </div>
 
 </div>

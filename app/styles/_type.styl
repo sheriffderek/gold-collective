@@ -94,7 +94,6 @@ extra-small-type()
 	copy()
 	font-size(10)
 	line-height: 1.4
-	// color: $gray
 	@media $break-point-2
 		font-size(11)
 
@@ -102,15 +101,12 @@ small-type()
 	copy()
 	font-size(13)
 	line-height: 1.4
-	// color: $gray-dark
 	@media $break-point-2
 		font-size(14)
 
 standard-type()
-	// copy()
 	font-size: 15px
 	line-height: 1.5
-	// color $black
 	font-family: $futura
 	font-weight: $book
 	letter-spacing: .08em
@@ -118,6 +114,15 @@ standard-type()
 		special()
 	@media $break-point-1
 		font-size: 16px
+
+fuck-this()
+	font-size(22)
+	line-height: 1.4
+	font-family: $futura
+	font-weight: $book
+	selection-color($highlight)
+	@media $break-point-2
+		font-size(24)
 
 medium-type()
 	font-size(18)
@@ -139,7 +144,6 @@ extra-large-type()
 	font-family: $heading-font-stack
 	font-size: 33px
 	line-height: 1
-	// color: $color-dark
 	@media $break-point-2
 		font-size: 40px
 
@@ -170,11 +174,6 @@ lyric-voice()
 
 
 
-// .text-w.fuck
-// 	// padding: $pad*2 $pad
-// 	h2
-// 		calm-voice()
-
 .about
 	.image-w
 		position: relative
@@ -183,13 +182,17 @@ lyric-voice()
 	extra-large-type()
 
 
+
 type-setup()
 	h1
 		extra-large-type()
 	h2
 		focus-voice()
+		font-weight: 700
+	h2 + h2
+		margin-top: $pad*2
 	p + h2
-		// margin-top: $pad*3
+		margin-top: $pad*3
 	h3
 		calm-voice()
 	p
@@ -222,7 +225,7 @@ tape()
 		type-setup()
 	.voice
 		margin-bottom: $pad*4
-	p
+	p //
 		margin-bottom: 0 //
 		&:not(:last-of-type)
 			margin-bottom: $pad*2

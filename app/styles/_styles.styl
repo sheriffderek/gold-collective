@@ -55,11 +55,19 @@ figure
 	padding: $pad
 	&.sticker-w
 		padding: $pad*.5
+		// border: 1px solid red
+		@media $break-point-3
+			padding: $pad $pad*3
 	@media $break-point-2
 		padding: $pad $pad*3
 
+
 .text-w.sticker-w
 	padding-bottom: 0
+
+.phone
+	@media $break-point-2
+		display: none
 
 .content
 	// padding: 1rem
@@ -96,7 +104,7 @@ figure
 	// 	standard()
 
 .fade-in
-	opacity: 0
+	// opacity: 0
 
 .about
 	//
@@ -335,13 +343,23 @@ svg
 
 .cake
 	margin-bottom: $pad
+	@media $break-point-3
+		hide()
 .pillow
 	margin: $pad 0
+	@media $break-point-3
+		hide()
 .pool
 	margin-top: $pad
 	// border: 10px solid red
 	@media $break-point-2
 		margin: $pad*3 0
+	@media $break-point-3
+		hide()
+
+.pool-party
+	@media $break-point-3
+		hide()
 
 .cta
 	// padding-bottom: $pad
@@ -353,6 +371,19 @@ svg
 		.text-w
 			padding: 0
 
+.photo-row
+	display: none
+	height: 400px
+	border: 1px solid red
+	.photo-list
+		display: flex
+		flex-direction: row
+	@media $break-point-2
+		display: block
+	.image-w
+		img
+			display: block
+
 .legal
 	.inner-w
 		padding: $pad
@@ -362,6 +393,24 @@ svg
 		@media $break-point-3
 			margin-left: 10%
 			max-width: 800px
+
+.site-header
+	background: black
+	color: white
+	.inner-w
+		display: flex
+		justify-content: center
+		align-items: center
+		h1
+			padding: $pad*10 $pad
+.desktop
+	h2
+		fuck-this()
+		font-weight: 700
+	.fuck p
+		fuck-this()
+		font-weight: 700
+		margin-top: $pad*2
 
 // .yyy
 // 	relative()
@@ -391,7 +440,7 @@ p
 		// background: $white
 		color: $black
 		@media $break-point-2
-			background: darken($white, 5%)
+			// background: darken($white, 5%)
 	&.dark
 		background: $black
 		color: $white
@@ -399,6 +448,8 @@ p
 		text-align: center
 		padding: $pad*4 0
 		font-size: 70px
+		@media $break-point-3
+			hide()
 		span
 			display: block
 		@media $break-point-1
@@ -416,11 +467,35 @@ p
 	&.take-me-out
 		font-size: 30px
 		padding: $pad*2
+		@media $break-point-3
+			hide()
 		.lyric
 			span
 				display: block
 	&.its-a
 		padding: $pad*10 0
+		@media $break-point-3
+			hide()
+
+.kiss, .laughing
+	@media $break-point-3
+		hide()
 
 .photo
 	z-index: 10
+
+.strong
+	font-weight: 700
+
+.row
+	display: flex
+	flex-direction: row
+	align-items: center
+	display: none
+	// height: 300px
+	li
+		flex-grow: 1
+		flex-shrink: 1
+		height: 100%
+		img
+			display: block
