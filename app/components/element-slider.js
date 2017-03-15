@@ -3,8 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	tagName: 'ul',
 	classNames: ['image-slider', 'rslides'],
-	sortedReviews: Ember.computed.sort('images', 'sortDefinition'),
-	sortDefinition: ['slug'],
 
 	didInsertElement() {
 		Ember.$('.rslides').responsiveSlides({
@@ -19,6 +17,8 @@ export default Ember.Component.extend({
 	didRender() {
 		Ember.$('.rslides').animate({
 			opacity: 1
-		}, 700);
+		}, 700, function() {
+			//
+		});
 	},
 });

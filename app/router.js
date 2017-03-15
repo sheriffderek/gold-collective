@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('secret-about');
   this.route('faqs');
   this.route('investment');
+  this.route('reviews');
 });
 
 export default Router;

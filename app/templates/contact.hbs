@@ -2,6 +2,11 @@
 <section class='container content editorial about contact'>
 <div class='inner-w'>
 
+
+	{{#if media.one}}
+		jdsakfj;klasjf;kas
+	{{/if}}
+
 	<h1>Contact</h1>
 
 	{{{model.content}}}
@@ -20,6 +25,10 @@
 			</a>
 		</li>
 	</ul>
+
+	<figure>
+		<img src='{{model.acf.contact_image}}' alt=''>
+	</figure>
 
 	<div class='social'>
 		<h2>Let's be friends 🙂</h2>
