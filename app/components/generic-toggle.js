@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       if ( window.innerWidth > 970 ) {
         this.set('isOpen', true);
       } else {
-        this.set('isOpen', false)
+        this.set('isOpen', false);
       }
     }).trigger('didResize');
     this._super(...arguments);
