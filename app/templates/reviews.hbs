@@ -1,9 +1,15 @@
 
-<ul class='review-list'>
-  {{#each model as |review|}}
-    <li class='review'>
-      <h2>{{{review.acf.review_copy}}}</h2>
-      <h3>{{{review.acf.review_source}}}</h3>
-    </li>
-  {{/each}}
-</ul>
+<section class="container content editorial faqs">
+<div class="inner-w">
+
+  <ul class='review-list'>
+    {{#each model as |review|}}
+      <li class='review'>
+        <h2>{{{review.acf.review_copy}}}</h2>
+        <h3>{{{review.acf.review_source}}}</h3>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
+</section>

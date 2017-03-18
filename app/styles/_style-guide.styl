@@ -8,12 +8,22 @@ $stylez = dotted
 // 	border $widthz $styles colour
 
 
-.style-guide
+body.style-guide
 	//
 	.container
 		margin-bottom: $pad*6
 	.page-title
-		//
+		border: 1px solid red
+
+	.site-map
+		display: flex
+		flex-flow: row wrap
+		transform: translate( -($pad), 0 )
+		li
+			a
+				display: block
+				padding: $pad
+
 	.section-heading
 		calm-voice()
 		color: $color-dark
@@ -143,7 +153,7 @@ $stylez = dotted
 		@media $break-point-1
 			padding: .6rem
 			split-in(3)
-			
+
 		@media $break-point-2
 			padding: .9rem
 
@@ -216,7 +226,7 @@ $stylez = dotted
 			background: $alternate
 		&.alternate-dark
 			background: $alternate-dark
-			
+
 .buttons
 	padding-bottom: $pad*4
 	.inner-w
