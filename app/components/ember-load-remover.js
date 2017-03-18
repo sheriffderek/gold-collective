@@ -22,7 +22,7 @@ export default EmberLoadRemover.extend({
       this.get('ember-load-config.loadingIndicatorClass') ||
       'ember-load-indicator';
 
-    Ember.$(`.${loadingIndicatorClass}`).fadeOut(200, function() {
+    Ember.$(`.${loadingIndicatorClass}`).fadeOut(300, function() {
       Ember.$(this).remove();
     });
   }

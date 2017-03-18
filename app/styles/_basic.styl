@@ -1,46 +1,43 @@
 
-// box-model reset
-html
-	box-sizing: border-box
+// // box-model reset
+// html
+// 	box-sizing: border-box
 
-*, *:before, *:after
-	box-sizing: inherit
+// *, *:before, *:after
+// 	box-sizing: inherit
 
-clear-floats()
-	&:after
-		content: ''
-		display: table
-		clear: 	both
 
-body
-	clear-floats()
-	-webkit-tap-highlight-color: rgba(0,0,0,0)
-	-webkit-tap-highlight-color: transparent
-	// set these specifically within scope / or not...
 
-// major blocks
-block()
-	display: block
-	width: 100%
-	float: left
-	clear-floats()
+// body
+// 	clear-floats()
 
-.container, .block
-	block()
+// 	// set these specifically within scope / or not...
 
-// center big blocks... like .inner-w
-center-block()
-	clear-floats()
-	margin-left: auto
-	margin-right: auto
+// // major blocks
+// block()
+// 	display: block
+// 	width: 100%
+// 	float: left
+// 	clear-floats()
 
-full-width() 
-	max-width: 100%
-	padding: 0
+// .container, .block
+// 	block()
+
+// // center big blocks... like .inner-w
+// center-block()
+// 	clear-floats()
+// 	margin-left: auto
+// 	margin-right: auto
+
+// full-width()
+// 	max-width: 100%
+// 	padding: 0
 
 // responsive image wrapper
-responsive-image()
-	img, iframe, video, canvas
+responsive-image-wrapper()
+	img
 		display: block
 		width: 100%
 		height: auto
+.image-w
+	responsive-image-wrapper()

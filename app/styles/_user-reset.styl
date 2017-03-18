@@ -1,10 +1,16 @@
 
 // ensure font size isn't adjusted in mobile browsers
-html 
-	font-size: 100% 
-	overflow-y: scroll 
-	-webkit-text-size-adjust: 100% 
-	-ms-text-size-adjust: 100%
+// html
+// 	font-size: 100%
+// 	overflow-y: scroll
+// 	-webkit-text-size-adjust: 100%
+// 	-ms-text-size-adjust: 100%
+
+html
+	box-sizing: border-box
+
+*, *:before, *:after
+	box-sizing: inherit
 
 // remove default margin // this shoul be already done in meyer-reset $check
 body //
@@ -14,8 +20,7 @@ body //
 a //
 	text-decoration: none
 	color: inherit
-	&:hover
-		cursor: pointer // just in case
+	cursor: pointer // just in case
 
 // cursor reset / stops blinking issues
 html,
@@ -34,6 +39,41 @@ button[disabled],
 input[disabled]
 	cursor: default
 
-// resolves an IE 9 SVG bug
+// resolves an IE 9 SVG bug // $todo - do we need this anymore?
 svg:not(:root)
 	overflow: hidden
+
+// remove iOS tap highlight
+*
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	-webkit-tap-highlight-color: transparent
+
+//
+selectable($type)
+	-webkit-user-select: $type
+	-khtml-user-select: $type
+	-moz-user-select: -moz- + ($type)
+	-o-user-select: $type
+	user-select: $type
+
+*:not(input) //
+	selectable(none)
+
+h1, h2, h3, h4, h5, h6, li, p
+	selectable(text)
+
+// text selection reset
+* //
+	&::-moz-selection,
+	&::selection
+		background: rgba(255,255,255,0) // nessesary ? $check
+		background: transparent
+
+selection-color($selection-color)
+	&::-moz-selection
+		color: $selection-color
+	&::selection
+		color: $selection-color
+
+// scope specific text selection highlights
+selection-color($color)

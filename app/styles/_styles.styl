@@ -1,498 +1,73 @@
 
-$mint = #98ff98
-
-html, body
-	height: 100%
-	background: $white
-	// background: darken($white, 6%)
-	@media $break-point-2
-		//
-body
-	standard-type()
-
-.image-w
-	responsive-image()
-
-	// &.photo
-	// 	max-width: 800px
-	// 	@media $break-point-2
-	// 		margin-left: $pad*4
-	// 		border: $pad solid $white
-	// 		width: 80%
-	// 		&.pool
-	// 			transform: rotate(-1deg)
-
-.image-slider
-	fixed-cover()
-	// border: 10px solid $white
-	background-position: cover
-	opacity: 0;
-	background: $black
-	li //
-		background-size: cover
-		min-height: 100%
-		background-position: center center
-	img //
-		opacity: 0
-
-body.landing
-	.site-header, .legal
-		display: none
-
-h1 //
-	large-type()
-	relative()
-	z-index: 40
-
-.container
-	//
-	.inner-w
-		padding: $pad
-		// center-block()
-		// max-width: 700px
-	border: 1px solid red
-	.inner-w
-		border: 1px solid blue
-
-figure
-	responsive-image()
-	max-width: 300px
-
-.text-w
-	padding: $pad
-	&.sticker-w
-		padding: $pad*.5
-		// border: 1px solid red
-		@media $break-point-3
-			padding: $pad $pad*3
-	@media $break-point-2
-		padding: $pad $pad*3
-
-
-.text-w.sticker-w
-	padding-bottom: 0
-
-.phone
-	@media $break-point-2
-		display: none
-
-.content, .style-guide .container
-	// padding: 1rem
-	// max-width: 800px
-	// border: 2px solid red
-	// .inner-w
-	// 	// padding-bottom: $pad*8
-	// 	// border: 2px solid blue
-	// @media $break-point-1
-	// 	padding: 1.5rem
-	// @media $break-point-2
-	// 	padding: 2rem
-	.inner-w
-		padding: $pad
-
-	@media $break-point-3
-		.inner-w
-			// margin: 0 auto
-			margin-left: 10%
-			max-width: 800px
-			// transform: translate(5%, 0)
-	footer
-		padding: $pad*4 0 $pad*4
-.type
-	//
-	// h1 //
-	// 	extra-large-type()
-	// h2 //
-	// 	medium-type()
-	// 	// color: red
-	// h3 //
-	// 	medium-type()
-	// p //
-	// 	standard()
-
-.fade-in
-	// opacity: 0
-
-.about
-	//
-	.cta
-		padding-bottom: $pad*4
-	@media $break-point-1
-		padding: 0
-
-.portal
-	display: block
-	// border: 1px solid red
-	clear-floats()
-	color: $white
-	width: 100%
-	max-width: 90%
-	absolute-translate-center()
-	div
-		// border: 3px solid blue
-	svg
-		display: block
-		// border: 3px solid yellow
-	@media $break-point-1
-		// max-width: 90%
-	@media $break-point-2
-		max-width: 82%
-
-.main-menu
-	padding: $pad 0
-	a //
-		&.active
-			color: $color
+// $components
+figure, .image-w
+	responsive-image-wrapper()
 
 svg
 	fill: currentColor
 
-.logo-header
-	padding: $pad*.5
-	width: 80%
-	max-width: 240px
-	margin-top: $pad*4
-	display: none
-	@media $break-point-1
-		// max-width: 300px
-
-
-.about
-	.logo-header
-		color: $black
-		color: $white
-		@media $break-point-2
-			color: $white
-
-.button
-	&.inquire, &.faq
-		// float: left
-		background: black
-		color: white
-		width: 49%
-		max-width: 200px
-		display: inline-block
-		vertical-align: middle
-		min-width auto
-		span
-			display: block
-			width: 100%
-			text-align: center
-	&:first-of-type
-		margin-right: 2%
-
-.contact-list
-	margin-top: $pad*2
-	margin-bottom: 0
-	// border: 1px solid red
-	clear-floats()
-	li //
-		display: block
-		margin-bottom: $pad
-		width: 100%
-		// border: 2px solid blue
-		float: left
-		a //
-			relative()
-			display: block
-			padding: $pad*.3 0
-			// border: 1px solid red
-			float: left
-			// transition: .2s
-			// &:after
-			// 	absolute()
-			// 	content: ''
-			// 	top: 0
-			// 	left: 0
-			// 	width: 105%
-			// 	height: 100%
-			// 	background: black
-			// 	z-index: -1
-			// 	transform: translate(-3px,0)
-			// 	opacity: 0
-			// 	// transition: .2s
-			// 	// transition-delay: .2s
-			// 	outline: 3px solid black
-			// &:hover
-			// 	// background: black
-			// 	// color: white
-			// 	&:after
-			// 		opacity: 1
-			// 		transform: translate(-3px,0)
-		.title, .content
-			float: left
-			clear: left
-			@media $break-point-1
-				float: none
-				clear: none
-		.title
-			tape()
-			// special()
-			// min-width: 60px
-		.content
-			@media $break-point-1
-				margin-left: $pad
-
-.tape, .magic
-	tape()
-	font-size: 24px
-	height: 40px
-	line-height: 24px
-
-.social
-	margin-top: $pad
-
-.social-list
-	li
-		display: inline-block
-	a
-		tape()
-		background: $color
-
-.iframe-w
-	margin-top: $pad*4
-	// background: alpha($black, 1)
-	width: calc(100% + .8rem)
-	// border: 1px solid red
-	right: $pad*.5
-	relative()
-
-.blast-focus
-	//
-	h2, p
-		max-width: 600px
-		font-size: 0;
-		.blast
-			standard-type()
-			@media $break-point-2
-				font-size: 20px
-	.title
-		display: inline-block
-
-.faqs, .investment, .contact
-	h1 + p, h1 + h2
-		margin-top: $pad*4
-
-.image-w
-	// relative()
-	.badge
-		absolute()
-		top: $pad
-		right: $pad
-		max-width: 38%
-		border-radius: 50%
-		overflow: hidden
-
-.style-guide
-	overflow: hidden
-	.inner-w
-		padding: $pad
-
-.embed #lc_form
-	padding: 0
-	margin: 0
-
-
-.site-map
+// $styles
+body > .ember-view // master wrapper by default
+	border: 3px solid blue
 	display: flex
-	flex-flow: row wrap
-	border: 1px solid red
-	li
-		a
-			padding: 1rem
+	flex-direction: column
+	min-height: 100vh
 
-.ember-load-indicator
-	z-index: 100
-	background: $white
-	relative()
-	fixed()
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	width: 100%
-	height: 100%
-
-.spinner
-	absolute-translate-center()
-	width: 120px
-	height: 120px
-
-.double-bounce1
-	width: 100%
-	height: 100%
-	border-radius: 50%
-	opacity: 0.8
-	position: absolute
-	top: 0
-	left: 0
-	animation: sk-bounce 1s infinite ease-in-out
-
-@keyframes sk-bounce
-	0%
-		transform: scale(0.5)
-	50%
-		transform: scale(1.0)
-	100%
-		transform: scale(0.5)
-
-
-
-.cake
-	margin-bottom: $pad
-	@media $break-point-3
-		hide()
-.pillow
-	margin: $pad 0
-	@media $break-point-3
-		hide()
-.pool
-	margin-top: $pad
-	// border: 10px solid red
-	@media $break-point-2
-		margin: $pad*3 0
-	@media $break-point-3
-		hide()
-
-.pool-party
-	@media $break-point-3
-		hide()
-
-.cta
-	// padding-bottom: $pad
-	.text-w
-		// padding: 0
-
-.faqs, .investment
-	.cta
-		.text-w
-			padding: 0
-
-.photo-row
-	display: none
-	height: 400px
-	border: 1px solid red
-	.photo-list
-		display: flex
-		flex-direction: row
-	@media $break-point-2
-		display: block
-	.image-w
-		img
-			display: block
+.application-outlet
+	display: flex
+	flex-direction: column
+	flex-grow: 1
 
 .legal
-	.inner-w
-		padding: $pad
-		padding-bottom: $pad*4
-		color: $gray-light
-		max-width: 800px
-		@media $break-point-3
-			margin-left: 10%
-			max-width: 800px
+	// border: 3px solid green
 
-.site-header
-	background: black
-	color: white
-	.inner-w
-		display: flex
+body.landing
+	//
+	.application-outlet
 		justify-content: center
 		align-items: center
-		h1
-			padding: $pad*10 $pad
-.desktop
-	h2
-		fuck-this()
-		font-weight: 700
-	.fuck p
-		fuck-this()
-		font-weight: 700
-		margin-top: $pad*2
-
-// .yyy
-// 	relative()
-// 	top: $pad*3
-// 	z-index: 5
-// 	transform: rotate(-2deg)
-//
-// .xxx
-// 	relative()
-// 	margin-top: $pad*2
-// 	// top: -30px
-
-.about
-	overflow: hidden!important
-	// border: 2px solid yellow
-
-p
-	max-width: 740px
-
-.song-w
-	// border: 1px solid blue
-	padding: $pad
-	text-align: center
-	lyric-voice()
-	//
-	&.light
-		// background: $white
-		color: $black
-		@media $break-point-2
-			// background: darken($white, 5%)
-	&.dark
-		background: $black
-		color: $white
-	&.come-as
-		text-align: center
-		padding: $pad*4 0
-		font-size: 70px
-		@media $break-point-3
-			hide()
-		span
-			display: block
-		@media $break-point-1
-			padding: $pad*6 0
-		@media $break-point-2
-			padding: $pad*10 0
-			// position: absolute
-			// top: 0
-			// left: 330px
-			// width: 1400px
-			// color: white
-			// background: transparent
-			// z-index: 0
-			// transform: rotate(1deg)
-	&.take-me-out
-		font-size: 30px
-		padding: $pad*2
-		@media $break-point-3
-			hide()
-		.lyric
-			span
-				display: block
-	&.its-a
-		padding: $pad*10 0
-		@media $break-point-3
-			hide()
-
-.kiss, .laughing
-	@media $break-point-3
-		hide()
-
-.photo
-	z-index: 10
-
-.strong
-	font-weight: 700
-
-.row
-	display: flex
-	flex-direction: row
-	align-items: center
-	display: none
-	// height: 300px
-	li
-		flex-grow: 1
-		flex-shrink: 1
+	.site-header
+		display: none
+	.image-slider
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
 		height: 100%
-		img
-			display: block
+		z-index: 0
+		.image
+			height: 100%
+			background-size: cover
+			background-position: center center
+	.portal
+		position: relative
+		display: block
+		width: 80vw
+		z-index: 5
+		color: white
+		// g
+		// 	&:hover
+		// 		color: black
+
+	.legal
+		display: none
+
+body.about
+	//
+
+body.faqs
+	//
+
+body.investment
+	//
+
+body.reviews
+	//
+
+body.contact
+	//
+
+body.inspiration
+	//

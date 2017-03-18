@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   classNames: ['container', 'content', 'about', 'editorial', 'fade-in'],
 
   didInsertElement() {
-    const $thisComponent = this.$();
+    // const $thisComponent = this.$();
     // $thisComponent.velocity({
     //   opacity: 1,
     // }, {
