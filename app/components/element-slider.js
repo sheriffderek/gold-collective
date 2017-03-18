@@ -15,10 +15,14 @@ export default Ember.Component.extend({
 		});
 	},
 	didRender() {
-		Ember.$('.rslides').animate({
-			opacity: 1
-		}, 700, function() {
-			//
-		});
+		const $slider = this.$();
+		$slider.css('opacity', 0);
+		Ember.run.later( function() {
+			$slider.animate({ // $todo switch for greensock
+				opacity: 1
+			}, 700, function() {
+				//
+			});
+		}, 300);
 	},
 });

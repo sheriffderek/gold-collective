@@ -8,6 +8,9 @@ module.exports = function(defaults) {
   });
 
   app.import('bower_components/jquery.responsive-slides/jquery.responsive-slides.js');
+
+  app.import('bower_components/flickity/dist/flickity.pkgd.js');
+
   app.import('bower_components/blast-text/jquery.blast.js');
   app.import('vendor/fit-text/jquery.fit-text.js');
 

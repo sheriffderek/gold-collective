@@ -1,0 +1,760 @@
+
+$mint = #98ff98
+
+html, body
+  height: 100%
+  background: $white
+  // background: darken($white, 6%)
+  @media $break-point-2
+    //
+body
+  standard-type()
+
+.image-w
+  responsive-image()
+
+  // &.photo
+  //  max-width: 800px
+  //  @media $break-point-2
+  //    margin-left: $pad*4
+  //    border: $pad solid $white
+  //    width: 80%
+  //    &.pool
+  //      transform: rotate(-1deg)
+
+.image-slider
+  fixed-cover()
+  // border: 10px solid $white
+  background-position: cover
+  opacity: 0;
+  background: $black
+  li //
+    background-size: cover
+    min-height: 100%
+    background-position: center center
+  img //
+    opacity: 0
+
+body.landing
+  .site-header, .legal
+    display: none
+
+h1 //
+  large-type()
+  relative()
+  z-index: 40
+
+figure
+  responsive-image()
+  max-width: 300px
+
+.container
+  //
+  .inner-w
+    padding: $pad
+    // center-block()
+    // max-width: 700px
+  border: 1px solid red
+  .inner-w
+    border: 1px solid blue
+
+.text-w
+  padding: $pad
+  &.sticker-w
+    padding: $pad*.5
+    // border: 1px solid red
+    @media $break-point-3
+      padding: $pad $pad*3
+  @media $break-point-2
+    padding: $pad $pad*3
+
+
+
+
+body
+  border: 5px solid green
+  > .ember-view
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    min-height: 100vh
+    border: 5px solid orange
+
+.application-outlet
+  border: 5px solid blue
+  flex-grow: 1
+
+.legal
+  border: 5px solid yellow
+
+
+
+
+
+
+
+
+
+.text-w.sticker-w
+  padding-bottom: 0
+
+.phone
+  @media $break-point-2
+    display: none
+
+.content, .style-guide .container
+  // padding: 1rem
+  // max-width: 800px
+  // border: 2px solid red
+  // .inner-w
+  //  // padding-bottom: $pad*8
+  //  // border: 2px solid blue
+  // @media $break-point-1
+  //  padding: 1.5rem
+  // @media $break-point-2
+  //  padding: 2rem
+  .inner-w
+    padding: $pad
+
+  @media $break-point-3
+    .inner-w
+      // margin: 0 auto
+      margin-left: 10%
+      max-width: 800px
+      // transform: translate(5%, 0)
+  footer
+    padding: $pad*4 0 $pad*4
+.type
+  //
+  // h1 //
+  //  extra-large-type()
+  // h2 //
+  //  medium-type()
+  //  // color: red
+  // h3 //
+  //  medium-type()
+  // p //
+  //  standard()
+
+.fade-in
+  // opacity: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about
+  //
+  .cta
+    padding-bottom: $pad*4
+  @media $break-point-1
+    padding: 0
+
+.portal
+  display: block
+  // border: 1px solid red
+  clear-floats()
+  color: $white
+  width: 100%
+  max-width: 90%
+  absolute-translate-center()
+  div
+    // border: 3px solid blue
+  svg
+    display: block
+    // border: 3px solid yellow
+  @media $break-point-1
+    // max-width: 90%
+  @media $break-point-2
+    max-width: 82%
+
+.main-menu
+  padding: $pad 0
+  a //
+    &.active
+      color: $color
+
+svg
+  fill: currentColor
+
+.logo-header
+  padding: $pad*.5
+  width: 80%
+  max-width: 240px
+  margin-top: $pad*4
+  display: none
+  @media $break-point-1
+    // max-width: 300px
+
+
+.about
+  .logo-header
+    color: $black
+    color: $white
+    @media $break-point-2
+      color: $white
+
+.button
+  &.inquire, &.faq
+    // float: left
+    background: black
+    color: white
+    width: 49%
+    max-width: 200px
+    display: inline-block
+    vertical-align: middle
+    min-width auto
+    span
+      display: block
+      width: 100%
+      text-align: center
+  &:first-of-type
+    margin-right: 2%
+
+.contact-list
+  margin-top: $pad*2
+  margin-bottom: 0
+  // border: 1px solid red
+  clear-floats()
+  li //
+    display: block
+    margin-bottom: $pad
+    width: 100%
+    // border: 2px solid blue
+    float: left
+    a //
+      relative()
+      display: block
+      padding: $pad*.3 0
+      // border: 1px solid red
+      float: left
+      // transition: .2s
+      // &:after
+      //  absolute()
+      //  content: ''
+      //  top: 0
+      //  left: 0
+      //  width: 105%
+      //  height: 100%
+      //  background: black
+      //  z-index: -1
+      //  transform: translate(-3px,0)
+      //  opacity: 0
+      //  // transition: .2s
+      //  // transition-delay: .2s
+      //  outline: 3px solid black
+      // &:hover
+      //  // background: black
+      //  // color: white
+      //  &:after
+      //    opacity: 1
+      //    transform: translate(-3px,0)
+    .title, .content
+      float: left
+      clear: left
+      @media $break-point-1
+        float: none
+        clear: none
+    .title
+      tape()
+      // special()
+      // min-width: 60px
+    .content
+      @media $break-point-1
+        margin-left: $pad
+
+.tape, .magic
+  tape()
+  font-size: 24px
+  height: 40px
+  line-height: 24px
+
+.social
+  margin-top: $pad
+
+.social-list
+  li
+    display: inline-block
+  a
+    tape()
+    background: $color
+
+.iframe-w
+  margin-top: $pad*4
+  // background: alpha($black, 1)
+  width: calc(100% + .8rem)
+  // border: 1px solid red
+  right: $pad*.5
+  relative()
+
+.blast-focus
+  //
+  h2, p
+    max-width: 600px
+    font-size: 0;
+    .blast
+      standard-type()
+      @media $break-point-2
+        font-size: 20px
+  .title
+    display: inline-block
+
+.faqs, .investment, .contact
+  h1 + p, h1 + h2
+    margin-top: $pad*4
+
+.image-w
+  // relative()
+  .badge
+    absolute()
+    top: $pad
+    right: $pad
+    max-width: 38%
+    border-radius: 50%
+    overflow: hidden
+
+.style-guide
+  overflow: hidden
+  .inner-w
+    padding: $pad
+
+.embed #lc_form
+  padding: 0
+  margin: 0
+
+
+
+
+
+
+
+.cake
+  margin-bottom: $pad
+  @media $break-point-3
+    hide()
+.pillow
+  margin: $pad 0
+  @media $break-point-3
+    hide()
+.pool
+  margin-top: $pad
+  // border: 10px solid red
+  @media $break-point-2
+    margin: $pad*3 0
+  @media $break-point-3
+    hide()
+
+.pool-party
+  @media $break-point-3
+    hide()
+
+.cta
+  // padding-bottom: $pad
+  .text-w
+    // padding: 0
+
+.faqs, .investment
+  .cta
+    .text-w
+      padding: 0
+
+.photo-row
+  display: none
+  height: 400px
+  border: 1px solid red
+  .photo-list
+    display: flex
+    flex-direction: row
+  @media $break-point-2
+    display: block
+  .image-w
+    img
+      display: block
+
+.legal
+  .inner-w
+    padding: $pad
+    padding-bottom: $pad*4
+    color: $gray-light
+    max-width: 800px
+    @media $break-point-3
+      margin-left: 10%
+      max-width: 800px
+
+.site-header
+  background: black
+  color: white
+  .inner-w
+    display: flex
+    justify-content: center
+    align-items: center
+    h1
+      padding: $pad*10 $pad
+.desktop
+  h2
+    fuck-this()
+    font-weight: 700
+  .fuck p
+    fuck-this()
+    font-weight: 700
+    margin-top: $pad*2
+
+// .yyy
+//  relative()
+//  top: $pad*3
+//  z-index: 5
+//  transform: rotate(-2deg)
+//
+// .xxx
+//  relative()
+//  margin-top: $pad*2
+//  // top: -30px
+
+.about
+  // overflow: hidden!important // $todo $why
+  // border: 2px solid yellow
+
+p
+  max-width: 740px
+
+.song-w
+  // border: 1px solid blue
+  padding: $pad
+  text-align: center
+  lyric-voice()
+  //
+  &.light
+    // background: $white
+    color: $black
+    @media $break-point-2
+      // background: darken($white, 5%)
+  &.dark
+    background: $black
+    color: $white
+  &.come-as
+    text-align: center
+    padding: $pad*4 0
+    font-size: 70px
+    @media $break-point-3
+      hide()
+    span
+      display: block
+    @media $break-point-1
+      padding: $pad*6 0
+    @media $break-point-2
+      padding: $pad*10 0
+      // position: absolute
+      // top: 0
+      // left: 330px
+      // width: 1400px
+      // color: white
+      // background: transparent
+      // z-index: 0
+      // transform: rotate(1deg)
+  &.take-me-out
+    font-size: 30px
+    padding: $pad*2
+    @media $break-point-3
+      hide()
+    .lyric
+      span
+        display: block
+  &.its-a
+    padding: $pad*10 0
+    @media $break-point-3
+      hide()
+
+.kiss, .laughing
+  @media $break-point-3
+    hide()
+
+.photo
+  z-index: 10
+
+.strong
+  font-weight: 700
+
+.row
+  display: flex
+  flex-direction: row
+  align-items: center
+  display: none
+  // height: 300px
+  li
+    flex-grow: 1
+    flex-shrink: 1
+    height: 100%
+    img
+      display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// basic example structure
+$colorz = rgba(0,0,0,.04)
+$widthz = 2px
+$stylez = dotted
+
+// border(colour)
+//  border $widthz $styles colour
+
+
+.site-map
+  border: 2px solid red
+  display: flex
+  flex-flow: row wrap
+  transform: translate( -($pad), 0 )
+  border: 1px solid red
+  li
+    a
+    display: block
+    padding: $pad
+
+body.style-guide
+  //
+  .container
+    margin-bottom: $pad*6
+  .page-title
+    border-bottom:: 1px solid red
+  .section-heading
+    // calm-voice()
+    color: $color-darks
+    border-bottom: 1px solid $gray
+    margin-bottom: $pad
+  .font
+    &:not(:last-of-type)
+      margin-bottom: $pad*4
+    &.heading
+      // large-type()
+      font-family: $heading-font-stack
+      line-height: 1.2
+    &.body
+      // standard-type()
+      font-family: $futura
+    .large
+      font-size: 40px
+      line-height: 1.2
+    .normal
+      font-size: 16px
+
+  .flag
+    font-family: monospace
+    display: block
+    background: $gray-lighter
+    padding: $pad*.5 $pad
+    small-type()
+
+
+// .basic
+//  .site-title
+//    large-icons()
+//    * //
+//      balance()
+
+
+
+
+// basic-example()
+//  padding: $pad
+//  background: $colorz
+
+// .container.basic-example
+//  basic-example()
+//  border: 1px $stylez $color
+//  span //
+//    border: 1px $stylez $color
+//    color: $color
+//  .inner-w
+//    basic-example()
+//    margin: $pad*2
+//    padding: $pad
+//    border: 1px $stylez $highlight
+//    span //
+//      border: 1px $stylez $highlight
+//      color: $highlight
+//  .block-list
+//    basic-example()
+//    border: 1px $stylez $black
+//    span //
+//      border: 1px $stylez $black
+//      color: $black
+//  .block
+//    basic-example()
+//    margin-bottom: ($pad*5)
+//    border: 1px $stylez $alternate
+//    span //
+//      border: 1px $stylez $alternate
+//      color: $alternate
+//  .image-w
+//    relative()
+//    basic-example()
+//    padding: 0
+//    margin-bottom: ($pad*2)
+//    border: 1px $stylez $color
+//    span //
+//      absolute()
+//      top: 0
+//      left: ($pad/2)
+//      transform: translate( $pad, -50% )
+//      border: 1px $stylez $color
+//      color: $color
+//  .text-w
+//    basic-example()
+//    border: 1px $stylez $color
+//    span //
+//      border: 1px $stylez $color
+//      color: $color
+//  span //
+//    display: inline-block
+//    transform: translate( ($pad/2), -83%)
+//    background: $gray-lighter
+//    font-size: 12px
+//    padding: .5rem
+//  .column
+//    //
+//    @media $break-point-2
+//      &:nth-of-type(1)
+//        width: 64%
+//        float: left
+//      &:nth-of-type(2)
+//        width: 34%
+//        float: right
+
+
+// /*
+// generate-swatch(color)
+//  &:color
+//    .name
+//      &:after
+//        content: 'color'
+//    .hex
+//      &:after
+//        content: '' + color
+// */
+
+// swatches
+.swatch-list
+  padding-bottom: 30px
+  .swatch //
+    width: 100%
+    float: left
+    padding: .3rem
+    // text-shadow: 0 0 2px alpha(white, .5)
+    transition: .3s padding ease-in
+    min-height: 60px
+    small-type()
+    @media $break-point-1
+      padding: .6rem
+      split-in(3)
+
+    @media $break-point-2
+      padding: .9rem
+
+    @media $break-point-3
+      split-in(6)
+
+    &.black
+      background: $black
+      color: alpha($white, .5)
+      .name
+        &:after
+          content: '$black'
+      .hex
+        &:after
+          content: '' + $black
+    &.white
+      .name
+        &:after
+          content: '$white'
+      .hex
+        &:after
+          content: '' + $white
+    &.gray-dark
+      background: $gray-dark
+    &.gray
+      background: $gray
+    &.gray-light
+      background: $gray-light
+    &.gray-lighter
+      background: $gray-lighter
+      .name
+        &:after
+          content: '$gray-lighter'
+      .hex
+        &:after
+          content: '' + $gray-lighter
+    &.color-light
+      background: $color-light
+      .name
+        &:after
+          content: '$color-light'
+      .hex
+        &:after
+          content: '' + $color-light
+    &.color
+      background: $color
+      .name
+        &:after
+          content: '$color'
+      .hex
+        &:after
+          content: '' + $color
+    &.color-dark
+      background: $color-dark
+      .name
+        &:after
+          content: '$color-dark'
+      .hex
+        &:after
+          content: '' + $color-dark
+    &.highlight-light
+      background: $highlight-light
+    &.highlight
+      background: $highlight
+    &.highlight-dark
+      background: $highlight-dark
+    &.alternate-light
+      background: $alternate-light
+    &.alternate
+      background: $alternate
+    &.alternate-dark
+      background: $alternate-dark
+
+.buttons
+  padding-bottom: $pad*4
+  .inner-w
+    display: flex
+    flex-direction: row
+    .button:not(:last-of-type)
+      margin-right: $pad
+

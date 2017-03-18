@@ -1,7 +1,8 @@
 {
   "name": "gold",
   "dependencies": {
-    "ember-qunit-notifications": "0.1.0"
+    "ember-qunit-notifications": "0.1.0",
+    "flickity": "^2.0.5"
   },
   "devDependencies": {
     "blast-text": "^2.0.0",

@@ -6,6 +6,6 @@ export default Ember.Route.extend({
 		let pageData = this.store.findAll('page');
 		console.log(pageData);
 		return pageData;
-	}
+	},
 
 });
