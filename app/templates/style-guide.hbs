@@ -8,67 +8,6 @@
 </header>
 
 
-{{#if media.noneToTwo}}
-  noneToTwoasdfsafsafsafadsfsafdsafsd
-{{/if}}
-
-
-<nav class='container'>
-<div class='inner-w'>
-
-  {{site-map}}
-
-</div>
-</nav>
-
-
-
-<section class='container social'>
-<div class='inner-w'>
-
-  {{social-list}}
-
-</div>
-</section>
-
-
-
-<section class='container color'>
-<div class='inner-w'>
-
-  <h2 class='section-heading'>Color</h2>
-
-  <ul class='swatch-list'>
-    <li class='swatch black'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-    <li class='swatch white'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-    <li class='swatch gray-lighter'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-    <li class='swatch color-light'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-    <li class='swatch color'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-    <li class='swatch color-dark'>
-      <span class='name'></span>
-      <span class='hex'></span>
-    </li>
-  </ul>
-
-</div>
-</section>
-
-
 
 <section class='container type-face'>
 <div class='inner-w'>
@@ -136,36 +75,80 @@
 
 
 
+<section class='container color'>
+<div class='inner-w'>
+
+  <h2 class='section-heading'>Color</h2>
+
+  <ul class='swatch-list'>
+    <li class='swatch black'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+    <li class='swatch white'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+    <li class='swatch gray-lighter'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+    <li class='swatch color-light'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+    <li class='swatch color'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+    <li class='swatch color-dark'>
+      <span class='name'></span>
+      <span class='hex'></span>
+    </li>
+  </ul>
+
+</div>
+</section>
+
+
+
+<section class='container'>
+<div class='inner-w'>
+
+  <h2 class='section-heading'>Site map</h2>
+
+  {{site-map}}
+
+</div>
+</section>
+
+
+
 <section class='container type-voice'>
 <div class='inner-w'>
 
-  <h2 class='section-heading'>Type voice</h2>
+  <h2 class='section-heading'>Type "voice"</h2>
 
-  <article>
+  <article class='wp-content'>
 
-    <div class='voice'>
-      <p>This is standard-type(). In the admin, it is the 'default.' Sometimes, you'll have the first word in bold("strong"). The next sentence is an example of that.</p>
-      <p><strong>Strong title</strong> is a way to seperate sections with titles for certain paragraphs. Use regular the regular paragraph that should be default and "strong" for the bold words.</p>
+    <div class='voice whisper'>
+      whisper-voice() {{typeExample.letters}}
     </div>
 
-    <div class='voice'>
-      <h3>
-        This is calm-voice(). In the admin, it is h3. We should use this for statements and call-outs that need to stand out above the standard copy. Use heading level 3.
-      </h3>
+    <div class='voice quiet'>
+      quiet-voice() {{typeExample.letters}}
     </div>
 
-    <div class='voice'>
-      <h2>
-        <span>This</span><span>is</span><span>Focus-</span><span>voice().</span>
-      </h2>
-
-      <h2>
-        <span>This</span><span>is</span><span>a</span><span>longer</span><span>sentence</span><span>in</span><span>focus</span><span>voice.</span><span>Use</span><span>heading</span><span>level</span><span>2.</span>
-      </h2>
+    <div class='voice standard-type'>
+      standard-type() {{typeExample.letters}}
     </div>
 
-    <div class='voice'>
-      <h1>This is extra-large-type(). So far we don't know what we're using this for.</h1>
+    <div class='voice strong'>
+      strong-voice() {{typeExample.letters}}
+    </div>
+
+    <div class='voice big-type'>
+      big-type() {{typeExample.letters}}
     </div>
 
   </article>
@@ -180,7 +163,7 @@
 
   <h2 class='section-heading'>Article spacing</h2>
 
-  <article class="editorial">
+  <article class='wp-content'>
 
     <h1>Page headings can use heading level 1</h1>
 
@@ -213,10 +196,26 @@
 
 
 
-<section class='container editorial'>
+<section class='container social'>
 <div class='inner-w'>
 
-	{{{model.content}}}
+  <h2 class='section-heading'>Social list</h2>
+
+  {{social-list}}
+
+</div>
+</section>
+
+
+
+<section class='container t'>
+<div class='inner-w'>
+
+  <h2 class='section-heading'>WordPress content spacing</h2>
+
+  <article class='wp-content'>
+	 {{{model.content}}}
+  </article>
 
 </div>
 </section>

@@ -1,5 +1,5 @@
 
-<header class='site-header'>
+<header class='container site-header'>
 <div class='inner-w'>
 
   <h1>THE GOLD COLLECTIVE</h1>
@@ -10,16 +10,59 @@
 
 
 <div class='container application-outlet {{media.classNames}}'>
+                                      {{!-- not really great --}}
   {{outlet}}
 </div>
 
 
 
-<section class='container legal'>
+<footer class='container legal'>
 <div class='inner-w'>
-  © 2017 THE GOLD COLLECTIVE
+
+  <div class='copy'>
+    © 2017 THE GOLD COLLECTIVE
+  </div>
+
+  <ul class='menu'>
+    <li>
+      {{#link-to 'landing'}}
+        <span>landing</span>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to 'about'}}
+        <span>about</span>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to 'faqs'}}
+        <span>faqs</span>
+      {{/link-to}}
+    </li>
+
+{{!--     <li>
+      {{#link-to 'investment'}}
+        <span>investment</span>
+      {{/link-to}}
+    </li> --}}
+
+    <li>
+      {{#link-to 'reviews'}}
+        <span>reviews</span>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to 'contact'}}
+        <span>contact</span>
+      {{/link-to}}
+    </li>
+  </ul>
+
 </div>
-</section>
+</footer>
 
 <div class='media-size-helper'></div>
 

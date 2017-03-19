@@ -2,7 +2,7 @@
 // font stack
 $base-font-stack 	= 'Georgia', serif
 $heading-font-stack	= 'JeanLuc', sans-serif
-$futura = "futura-pt",sans-serif
+$futura = 'futura-pt',sans-serif
 
 // case
 lowercase()
@@ -15,13 +15,13 @@ uppercase()
 	text-transform: uppercase
 
 // type size patterns
-extra-small-type()
+whisper-voice()
 	font-size: 10px
 	line-height: 1.4
 	@media $break-point-2
 		font-size: 11px
 
-small-type()
+quiet-voice()
 	font-size: 13px
 	line-height: 1.4
 	@media $break-point-2
@@ -34,66 +34,78 @@ standard-type()
 	font-weight: 400
 	letter-spacing: .08em
 	strong
-		special()
+		uppercase()
+		font-weight: 700
 	@media $break-point-1
-		font-size: 16px
+		// font-size: 16px
 
-medium-type()
-	font-size: 18px
-	line-height: 1.4
-	font-family: $futura
-	font-weight: 400
-	selection-color($highlight)
-	@media $break-point-2
-		font-size: 19px
+p
+	a //
+		display: inline-block
+		text-decoration: underline
 
-large-type()
-	font-family: $heading-font-stack
-	font-size: 24px
-	line-height: 1.4
-	@media $break-point-2
-		font-size: 30px
+// medium-type()
+// 	font-size: 18px
+// 	line-height: 1.4
+// 	font-family: $futura
+// 	font-weight: 400
+// 	selection-color($highlight)
+// 	@media $break-point-2
+// 		font-size: 19px
 
-extra-large-type()
+// large-type()
+// 	font-family: $heading-font-stack
+// 	font-size: 24px
+// 	line-height: 1.4
+// 	@media $break-point-2
+// 		font-size: 30px
+
+strong-voice()
+	font-size: 20px
+	font-weight: 700
+	// color: blue
+	line-height: 1.2
+
+big-type()
 	font-family: $heading-font-stack
 	font-size: 33px
 	line-height: 1
+	// color: red
 	@media $break-point-2
 		font-size: 40px
 
-focus-voice()
-	standard-type()
-	span
-		background: $black
-		color: $white
-		padding: $pad*.5 $pad*.5
-		display: inline-block
-		margin-bottom: $pad*.5
+// focus-voice()
+// 	standard-type()
+// 	span
+// 		background: $black
+// 		color: $white
+// 		padding: $pad*.5 $pad*.5
+// 		display: inline-block
+// 		margin-bottom: $pad*.5
 
-.focus-voice
-	focus-voice()
+// .focus-voice
+// 	focus-voice()
 
-calm-voice()
-	standard-type()
-	font-size: 18px
-	// color: red
-	@media $break-point-2
-		font-size: 19px
+// calm-voice()
+// 	standard-type()
+// 	font-size: 18px
+// 	// color: red
+// 	@media $break-point-2
+// 		font-size: 19px
 
-.calm-voice
-	calm-voice()
+// .calm-voice
+// 	calm-voice()
 
-lyric-voice()
-	extra-large-type()
+// lyric-voice()
+// 	extra-large-type()
 
 
 
-.about
-	.image-w
-		position: relative
+// .about
+// 	.image-w
+// 		position: relative
 
-.page-title
-	extra-large-type()
+
 
 
 
@@ -113,7 +125,7 @@ lyric-voice()
 // 		&:not(:last-of-type)
 // 			margin-bottom: $pad*2
 
-tape()
+black-label()
 	display: inline-block
 	background: $black
 	color: $white
@@ -134,15 +146,15 @@ tape()
 	// p
 	// 	border: 1px solid yellow
 
-.type-voice
-	article
-		type-setup()
-	.voice
-		margin-bottom: $pad*4
-	p //
-		margin-bottom: 0 //
-		&:not(:last-of-type)
-			margin-bottom: $pad*2
+// .type-voice
+// 	article
+// 		type-setup()
+// 	.voice
+// 		margin-bottom: $pad*4
+// 	p //
+// 		margin-bottom: 0 //
+// 		&:not(:last-of-type)
+// 			margin-bottom: $pad*2
 
 
 
@@ -151,3 +163,13 @@ tape()
 // 		padding: $pad 0 $pad $pad*1.7
 // 		li //
 // 			margin-bottom $pad*.5
+
+
+p
+	selection-color($color)
+	strong, em
+		selection-color($color-dark)
+
+h2
+	selection-color($gray)
+

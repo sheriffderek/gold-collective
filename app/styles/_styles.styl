@@ -13,6 +13,11 @@ svg
 		padding: $pad
 		width: 100%
 		max-width: 1000px
+		@media $break-point-1
+			padding: $pad $pad*2
+
+body
+	standard-type()
 
 // $styles
 body > .ember-view // master wrapper by default
@@ -35,17 +40,56 @@ body > .ember-view // master wrapper by default
 	.inner-w
 		// border: 5px solid orange
 
+.cta
+	margin-top: $pad*6
+	.action-list
+		display: flex
+	.action
+		display: block
+		&:not(:last-of-type)
+			margin-right: $pad
+		a //
+			display: block
 
 .social-list
 	display: flex
-	li
+	li //
 		&:not(:first-of-type)
 			margin-left: $pad
-		a
+		a //
 			display: block
 			padding: $pad
 			background: $color
 
+.wp-content
+	// border: 1px solid red
+	padding-top: $pad*4
+	p, h2
+		max-width: 800px
+	h1
+		big-type()
+		margin-bottom: $pad*4
+	h2
+		strong-voice()
+	p
+		margin-top: $pad*2
+	p + h2
+		margin-top: $pad*4
+	h2 + h2
+		margin-top: $pad*2
+	figure
+		margin: $pad*2 0
+	.gallery
+		// border: 1px solid red
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		.gallery-item
+			// border: 1px solid blue
+			width: 32.5%
+			padding: $pad*2 0
+		.gallery-icon
+			responsive-image-wrapper()
 
 body.landing
 	//
@@ -90,23 +134,156 @@ body.about
 	.photo-list
 		display: flex
 		flex-direction: row
+	.gallery
+		display: none
+		@media $break-point-2
+			display: flex
+	.image-w
+		display: block
+		@media $break-point-2
+			display: none
+	h2
+		@media $break-point-2
+			&:nth-of-type(3)
+				margin-top: $pad*2
 
 body.faqs
-	//
+	.wp-content
+		p
+			margin-top: $pad*3
 
 body.investment
 	//
 
 body.reviews
-	//
+	.reviews
+		margin-top: $pad*8
+		h1
+			big-type()
+	.social
+		margin: $pad*1 0
+		h2
+			margin-bottom: $pad
+		@media $break-point-1
+			margin: $pad*2 0
+	.gallery
+		.gallery-item
+			flex-basis: 100%
+			max-width: 800px
+			&:nth-of-type(1), &:nth-of-type(3)
+				display: none
+			@media $break-point-1
+				flex-basis: 32%
+				&:nth-of-type(1), &:nth-of-type(3)
+					display: block
+	.pillows
+		margin-top: $pad*3
+		@media $break-point-1
+			display: none
+	.reviews
+		margin-top: $pad*3
+	.review-list
+		// border: 3px solid blue
+		margin-top: $pad*3
+		// display: flex
+		// flex-direction: row
+		// align-items: center
+		.review
+			// border: 3px solid orange
+			&:not(:first-of-type)
+				// margin-top: $pad*6
+		.quote
+			// text-align: left
+			// border: 1px solid red
+			max-width: 760px
+			margin: 0
+		.source
+			// text-align: leftp
+			// border: 2px solid blue
+			opacity: .5
+			margin-top: $pad*2
+			&:before
+				// content: '~ '
+				opacity: .3
 
 body.contact
 	//
+	.contact-list
+		// border: 1px solid red
+		margin: $pad*2 0
+		.contact
+			margin-bottom: $pad
+		.title
+			black-label()
+		.content
+			whisper-voice()
+			@media $break-point-1
+				standard-type()
+	figure
+		max-width: 540px
+	.social
+		margin: $pad*4 0
+		@media $break-point-1
+			margin: $pad*6 0
+		h2
+			margin-bottom: $pad*2
+	.reviews
+		h1
+			big-type()
+			margin-bottom: $pad*3
+	.form
+		max-width: 800px
+		h2
+			strong-voice()
+			margin: $pad*5 0 $pad
+		iframe
+			margin-left: -5px
 
 body.inspiration
 	//
 
+footer.legal
+	whisper-voice()
+	padding-top: $pad*4
+	.inner-w
+		display: flex
+		flex-direction: column
+		@media $break-point-1
+			flex-direction: row
+	.copy
+		// border: 1px solid red
+	.menu
+		// border: 1px solid blue
+		display: flex
+		flex-direction: row
+		// margin-left: $pad*4
+		// display: none
+		@media $break-point-1
+			display: flex
+			margin-left: $pad*4
+		li
+			margin-right: $pad*2
+		a
+			color: $gray-light
+			&:hover
+				color: $color
 
-.legal
-	small-type()
+.quote
+	p
+		&:before, &:after
+			display: inline
+			// font-size: 30px
+
+			color: $gray-light
+			// position: absolute
+		&:before
+			content: '“'
+
+			// top: 0
+			// left: 0
+		&:after
+			content: '”'
+			// right: 0
+			// bottom: 0
+
 

@@ -2,17 +2,29 @@
 <section class="container content editorial faqs">
 <div class="inner-w">
 
-  {{{model.content}}}
+  <section class='wp-content'>
+    {{{model.content}}}
+  </section>
+
 
   <footer class='cta'>
-    <div class='text-w'>
-      {{#link-to 'investment' class='button faq'}}
+    <ul class='action-list'>
+{{!--       <li class='action'>
+      {{#link-to 'investment' class='button investment'}}
         <span>Investment</span>
       {{/link-to}}
+      </li> --}}
+      <li class='action'>
       {{#link-to 'contact' class='button inquire'}}
         <span>Inquire</span>
       {{/link-to}}
-    </div>
+      </li>
+      <li class='action'>
+      {{#link-to 'reviews' class='button reviews'}}
+        <span>Reviews</span>
+      {{/link-to}}
+      </li>
+    </ul>
   </footer>
 
 </div>

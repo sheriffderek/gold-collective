@@ -2,16 +2,52 @@
 <section class="container content editorial faqs">
 <div class="inner-w">
 
-  {{review-slider reviews=model}}
 
-  <ul class='review-list'>
-    {{#each model as |review|}}
-      <li class='review'>
-        <h2>{{{review.acf.review_copy}}}</h2>
-        <h3>{{{review.acf.review_source}}}</h3>
+  <section class='wp-content'>
+    {{{model.press.content}}}
+  </section>
+
+
+  <section>
+    <div class='social'>
+      <h2>Let's be friends 🙂</h2>
+      {{social-list}}
+    </div>
+    <figure class='image-w pillows'>
+      <img src='http://thisisthegoldcollective.com/cms/wp-content/uploads/2016/02/MG_7970-1024x683.jpg' alt=''>
+    </figure>
+  </section>
+
+
+  <section class='reviews'>
+
+    <h1>Reviews</h1>
+
+    {{review-slider reviews=model.reviews class='flickity-fade'}}
+{{!--     <ul class='review-list'>
+      {{#each model.reviews as |review|}}
+        <li class='review'>
+          <h2 class='quote'>{{{review.acf.review_copy}}}</h2>
+          <h3 class='source'>{{{review.acf.review_source}}}</h3>
+        </li>
+      {{/each}}
+    </ul> --}}
+  </section>
+
+  <footer class='cta'>
+    <ul class='action-list'>
+      <li class='action'>
+      {{#link-to 'faqs' class='button faq'}}
+        <span>FAQs</span>
+      {{/link-to}}
       </li>
-    {{/each}}
-  </ul>
+      <li class='action'>
+      {{#link-to 'contact' class='button inquire'}}
+        <span>Inquire</span>
+      {{/link-to}}
+      </li>
+    </ul>
+  </footer>
 
 </div>
 </section>

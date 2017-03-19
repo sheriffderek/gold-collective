@@ -2,18 +2,20 @@
 <section class='container content page-content'>
 <div class='inner-w'>
 
-	<h1>Contact</h1>
+	<section class='wp-content'>
+		<h1>Contact</h1>
 
-	{{{model.content}}}
+		{{{contact.content}}}
+	</section>
 
 	<ul class='contact-list'>
-		<li>
+		<li class='contact'>
 			<a href='tel:310-721-1451'>
 				<span class='title'>Call</span>
 				<span class='content'>310-721-1451</span>
 			</a>
 		</li>
-		<li>
+		<li class='contact'>
 			<a href='mailto:studio@thisisthegoldcollective.com'>
 				<span class='title'>Email</span>
 				<span class='content'>studio@thisisthegoldcollective.com</span>
@@ -21,16 +23,28 @@
 		</li>
 	</ul>
 
-	<figure>
-		<img src='{{model.acf.contact_image}}' alt=''>
-	</figure>
 
-	<div class='social'>
+
+{{!-- 	<figure>
+		<img src='{{contact.acf.contact_image}}' alt=''>
+	</figure> --}}
+
+{{!-- 	<div class='social'>
 		<h2>Let's be friends 🙂</h2>
 		{{social-list}}
-	</div>
+	</div> --}}
 
-	{{!-- {{contact-form}} --}}
+
+{{!-- 	<section class='reviews'>
+		<h1>What people are saying...</h1>
+		{{review-slider reviews=reviews class='flickity-fade'}}
+	</section> --}}
+
+	<section class='form'>
+		<h2>If you'd prefer for us to contact you, fill out the form below.</h2>
+		{{contact-form}}
+	</section>
+
 
 
 	{{!-- {{partial 'partials/main-menu'}} --}}

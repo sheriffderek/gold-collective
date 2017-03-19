@@ -59,7 +59,7 @@ selectable($type)
 *:not(input) //
 	selectable(none)
 
-h1, h2, h3, h4, h5, h6, li, p
+h1, h2, h3, h4, h5, h6, li, p, strong, em
 	selectable(text)
 
 // text selection reset
@@ -74,6 +74,9 @@ selection-color($selection-color)
 		color: $selection-color
 	&::selection
 		color: $selection-color
+	selection-color: $selection-color
 
 // scope specific text selection highlights
-selection-color($color)
+// selection-color($color)
+
+

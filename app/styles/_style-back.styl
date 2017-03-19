@@ -1,0 +1,172 @@
+.site-map
+  border: 2px solid red
+  display: flex
+  flex-flow: row wrap
+  transform: translate( -($pad), 0 )
+  border: 1px solid red
+  li
+    a
+    display: block
+    padding: $pad
+
+// // basic example structure
+// $colorz = rgba(0,0,0,.04)
+// $widthz = 2px
+// $stylez = dotted
+
+// // border(colour)
+// //  border $widthz $styles colour
+
+
+
+
+body.style-guide
+  //
+  .container
+    margin-bottom: $pad*6
+  .page-title
+    border-bottom:: 1px solid red
+  .section-heading
+    // calm-voice()
+    color: $color-darks
+    border-bottom: 1px solid $gray
+    margin-bottom: $pad
+  .font
+    &:not(:last-of-type)
+      margin-bottom: $pad*4
+    &.heading
+      // large-type()
+      font-family: $heading-font-stack
+      line-height: 1.2
+    &.body
+      // standard-type()
+      font-family: $futura
+    .large
+      font-size: 40px
+      line-height: 1.2
+    .normal
+      font-size: 16px
+
+  .flag
+    font-family: monospace
+    display: block
+    background: $gray-lighter
+    padding: $pad*.5 $pad
+    small-type()
+
+  .type-faces
+    border: 1px solid red
+
+
+
+
+
+// /*
+// generate-swatch(color)
+//  &:color
+//    .name
+//      &:after
+//        content: 'color'
+//    .hex
+//      &:after
+//        content: '' + color
+// */
+
+// swatches
+.swatch-list
+  padding-bottom: 30px
+  .swatch //
+    width: 100%
+    float: left
+    padding: .3rem
+    // text-shadow: 0 0 2px alpha(white, .5)
+    transition: .3s padding ease-in
+    min-height: 60px
+    small-type()
+    @media $break-point-1
+      padding: .6rem
+      split-in(3)
+
+    @media $break-point-2
+      padding: .9rem
+
+    @media $break-point-3
+      split-in(6)
+
+    &.black
+      background: $black
+      color: alpha($white, .5)
+      .name
+        &:after
+          content: '$black'
+      .hex
+        &:after
+          content: '' + $black
+    &.white
+      .name
+        &:after
+          content: '$white'
+      .hex
+        &:after
+          content: '' + $white
+    &.gray-dark
+      background: $gray-dark
+    &.gray
+      background: $gray
+    &.gray-light
+      background: $gray-light
+    &.gray-lighter
+      background: $gray-lighter
+      .name
+        &:after
+          content: '$gray-lighter'
+      .hex
+        &:after
+          content: '' + $gray-lighter
+    &.color-light
+      background: $color-light
+      .name
+        &:after
+          content: '$color-light'
+      .hex
+        &:after
+          content: '' + $color-light
+    &.color
+      background: $color
+      .name
+        &:after
+          content: '$color'
+      .hex
+        &:after
+          content: '' + $color
+    &.color-dark
+      background: $color-dark
+      .name
+        &:after
+          content: '$color-dark'
+      .hex
+        &:after
+          content: '' + $color-dark
+    &.highlight-light
+      background: $highlight-light
+    &.highlight
+      background: $highlight
+    &.highlight-dark
+      background: $highlight-dark
+    &.alternate-light
+      background: $alternate-light
+    &.alternate
+      background: $alternate
+    &.alternate-dark
+      background: $alternate-dark
+
+.page-title
+  strong-voice()
+
+.buttons
+  padding-bottom: $pad*4
+  .inner-w
+    display: flex
+    flex-direction: row
+  .button:not(:last-of-type)
+    margin-right: $pad

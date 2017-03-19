@@ -2,19 +2,23 @@
 <section class='container content editorial investment'>
 <div class='inner-w'>
 
-  {{#adopt-orphans}}
+  <article class='wp-content'>
     {{{model.content}}}
-  {{/adopt-orphans}}
+  </article>
 
   <footer class='cta'>
-    <div class='text-w'>
+    <ul class='action-list'>
+      <li class='action'>
       {{#link-to 'faqs' class='button faq'}}
         <span>FAQs</span>
       {{/link-to}}
+      </li>
+      <li class='action'>
       {{#link-to 'contact' class='button inquire'}}
         <span>Inquire</span>
       {{/link-to}}
-    </div>
+      </li>
+    </ul>
   </footer>
 
 </div>

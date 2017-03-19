@@ -13,6 +13,134 @@ body.style-guide
 	.container
 		margin-bottom: $pad*6
 	.page-title
+		strong-voice()
 		border-bottom: 1px solid $color-dark
 	.section-heading
 		margin-bottom: $pad
+
+	.site-map
+		// border: 1px solid red
+
+	section
+		.section-heading
+			border-bottom: 1px solid $color-dark
+	section.social
+		// border: 1px solid blue
+
+	section.color
+		// border: 1px solid orange
+		.swatch-list
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			.swatch
+				flex-basis: 100%
+				padding: $pad*2 $pad
+				@media $break-point-1
+					flex-basis: (1/2)*100%
+				@media $break-point-2
+					flex-basis: (1/3)*100%
+				small-type()
+				&.black
+					background: $black
+					color: alpha($white, .5)
+					.name
+						&:after
+							content: '$black'
+					.hex
+						&:after
+							content: '' + $black
+
+				&.white
+					.name
+						&:after
+							content: '$white'
+					.hex
+						&:after
+							content: '' + $white
+				&.gray-dark
+					background: $gray-dark
+				&.gray
+					background: $gray
+				&.gray-light
+					background: $gray-light
+				&.gray-lighter
+					background: $gray-lighter
+					.name
+						&:after
+							content: '$gray-lighter'
+					.hex
+						&:after
+							content: '' + $gray-lighter
+
+				&.color-light
+					background: $color-light
+					.name
+						&:after
+							content: '$color-light'
+					.hex
+						&:after
+							content: '' + $color-light
+				&.color
+					background: $color
+					.name
+						&:after
+							content: '$color'
+					.hex
+						&:after
+							content: '' + $color
+				&.color-dark
+							background: $color-dark
+					.name
+						&:after
+							content: '$color-dark'
+					.hex
+						&:after
+							content: '' + $color-dark
+
+	section.type-face
+		.font
+			&:not(:last-of-type)
+				margin-bottom: $pad*4
+			&.heading
+				// large-type()
+				font-family: $heading-font-stack
+				line-height: 1.2
+			&.body
+				// standard-type()
+				font-family: $futura
+			.large
+				font-size: 40px
+				line-height: 1.2
+			.normal
+				font-size: 16px
+			.flag
+				font-family: monospace
+				display: block
+				background: $gray-lighter
+				padding: $pad*.5 $pad
+				whisper-voice()
+				display: inline-block
+
+	section.type-voice
+		.voice
+			&.whisper
+				whisper-voice()
+			&.quiet
+				quiet-voice()
+			&.standard-type
+				standard-type()
+			&.strong
+				strong-voice()
+			&.big-type
+				big-type()
+		// border: 1px solid green
+
+	section.type-spacing
+		display: none
+		// border: 1px solid pink
+
+
+
+
+
