@@ -1,5 +1,5 @@
 
-{{#each reviews as |review|}}
+{{#each (shuffle reviews) as |review|}}
   <li class='review'>
     <h2 class='quote'>{{{review.acf.review_copy}}}</h2>
     <h3 class='source'>{{review.acf.review_source}}</h3>
