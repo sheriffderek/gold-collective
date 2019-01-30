@@ -1,13 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    // If you don't need slugs, do this instead.
-    // return this.store.findRecord('post', params.id);
+  model() {
+    // By default the WP-API returns a maximum of 10 items.
+    // return this.store.findAll('post');
 
-    // Support for slugs.
-    return this.store.query('post', {
-      slug: params.post_slug
-    }).then(models => models.get('firstObject'));
+    // To get more we can query with `per_page`.
+    return this.get('store').query('post', {per_page: 99});
   }
 });

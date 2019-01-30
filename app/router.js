@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('investment');
   this.route('reviews');
   this.route('posts', function() {
+    // index
     this.route('post', {path: ':post_slug'});
   });
 });

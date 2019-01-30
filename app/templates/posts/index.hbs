@@ -2,10 +2,12 @@
 <section class='container'>
 <div class='inner-w'>
 
-	<ul class='post-list'>asdf
+	<ul class='post-list'>
 		{{#each model as |post index|}}
 			<li class='post'>
-				{{index}}
+				{{#link-to 'posts.post' post.slug}}
+					{{post.title}}
+				{{/link-to}}
 			</li>
 		{{/each}}
 	</ul>
