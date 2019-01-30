@@ -16,6 +16,9 @@ Router.map(function() {
   this.route('faqs');
   this.route('investment');
   this.route('reviews');
+  this.route('posts', function() {
+    this.route('post', {path: ':post_slug'});
+  });
 });
 
 export default Router;
