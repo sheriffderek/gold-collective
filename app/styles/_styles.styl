@@ -79,6 +79,8 @@ body > .ember-view // master wrapper by default
 		margin-top: $pad*2
 	figure
 		margin: $pad*2 0
+	.wp-block-image
+		max-width: 800px
 	.gallery
 		// border: 1px solid red
 		display: flex
@@ -262,10 +264,20 @@ body.contact
 
 body.inspiration
 	//
+		
+body.posts
+	.posts-heading
+		big-type()
+	.title
+		strong-voice()
+	.read-more
+		text-decoration: underline
+		color: $gray-dark
 
 footer.legal
 	whisper-voice()
 	padding-top: $pad*4
+	padding-bottom: $pad*2
 	.inner-w
 		display: flex
 		flex-direction: column

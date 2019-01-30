@@ -2,15 +2,49 @@
 <section class='container'>
 <div class='inner-w'>
 
+	<header class='wp-content'>
+		<h1 class="posts-heading">Thoughts and Feelings</h1>
+	</header>
+
+
 	<ul class='post-list'>
 		{{#each model as |post index|}}
 			<li class='post'>
 				{{#link-to 'posts.post' post.slug}}
-					{{post.title}}
+					<h3 class='title'>{{post.title}}</h3>
+					<p class='data'>{{post.date}}</p>
+
+					<div class='read-more'>
+						<span>Read</span>
+					</div>
 				{{/link-to}}
 			</li>
 		{{/each}}
 	</ul>
+
+
+  <footer class='cta'>
+    <ul class='action-list'>
+{{!--       <li class='action'>
+      {{#link-to 'investment' class='button investment'}}
+        <span>Investment</span>
+      {{/link-to}}
+      </li> --}}
+      <li class='action'>
+      {{#link-to 'contact' class='button inquire'}}
+        <span>Inquire</span>
+      {{/link-to}}
+      </li>
+      <li class='action'>
+      {{#link-to 'reviews' class='button reviews'}}
+        <span>
+          <span>Press</span>
+          <span class='large'> \ Reviews</span>
+        </span>
+      {{/link-to}}
+      </li>
+    </ul>
+  </footer>
 
 </div>
 </section>

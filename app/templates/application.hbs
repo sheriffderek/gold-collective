@@ -10,7 +10,6 @@
 
 
 <div class='container application-outlet {{media.classNames}}'>
-                                      {{!-- not really great --}}
   {{outlet}}
 </div>
 
@@ -63,6 +62,12 @@
     <li>
       {{#link-to 'contact'}}
         <span>inquire</span>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to 'posts'}}
+        <span>posts</span>
       {{/link-to}}
     </li>
   </ul>
