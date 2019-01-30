@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import DS from 'ember-data';
 import PostModel from "ember-wordpress/models/post";
 

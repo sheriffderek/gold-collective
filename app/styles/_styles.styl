@@ -213,6 +213,13 @@ body.reviews
 				// content: '~ '
 				opacity: .3
 
+figcaption
+	whisper-voice()
+	margin-top: $pad*.25
+
+.ivys-portrait
+	max-width: 50%
+
 body.contact
 	//
 	.contact-list
@@ -220,12 +227,19 @@ body.contact
 		margin: $pad*2 0
 		.contact
 			margin-bottom: $pad
+			margin-bottom: $pad*2.5
+			display: inline-block
+			@media $break-point-2
+				display: block
 		.title
-			black-label()
+			button()
+			display: inline-block
+			min-width: 120px
+			margin-right: $pad
 		.content
-			whisper-voice()
-			@media $break-point-1
-				standard-type()
+			display: none
+			@media $break-point-2
+				display: inline-block
 	figure
 		max-width: 540px
 	.social
@@ -255,7 +269,7 @@ footer.legal
 	.inner-w
 		display: flex
 		flex-direction: column
-		@media $break-point-1
+		@media $break-point-2
 			flex-direction: row
 	.copy
 		// border: 1px solid red
@@ -265,7 +279,7 @@ footer.legal
 		flex-direction: row
 		// margin-left: $pad*4
 		// display: none
-		@media $break-point-1
+		@media $break-point-2
 			display: flex
 			margin-left: $pad*4
 		li

@@ -2,7 +2,7 @@ import Ember from 'ember';
 import EmberLoadRemover from 'ember-load/components/ember-load-remover';
 import layout from '../templates/components/ember-load-remover';
 
-const { inject, Component, $ } = Ember;
+const { inject /*, Component, $*/ } = Ember;
 
 export default EmberLoadRemover.extend({
   layout,
