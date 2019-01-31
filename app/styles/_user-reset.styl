@@ -69,12 +69,14 @@ h1, h2, h3, h4, h5, h6, li, p, strong, em
 		background: rgba(255,255,255,0) // nessesary ? $check
 		background: transparent
 
-selection-color($selection-color)
+selection-color($selection-color, $background = transparent)
 	&::-moz-selection
 		color: $selection-color
+		background-color: $background
 	&::selection
 		color: $selection-color
-	selection-color: $selection-color
+		selection-color: $selection-color
+		background-color: $background
 
 // scope specific text selection highlights
 // selection-color($color)
